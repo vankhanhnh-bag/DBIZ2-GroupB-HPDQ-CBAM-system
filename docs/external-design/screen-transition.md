@@ -1,21 +1,6 @@
 # Screen Transition Diagram: EcoTrace
 
-## 1. All users
-
-```mermaid
-flowchart LR
-  entry(["Entry: user opens EcoTrace or requests a protected page while signed out"])
-  S00_01["S-F00-01<br>Sign In"]
-  destination(["Requested EcoTrace workspace / feature<br>(outside this F-04 screen list)"])
-
-  entry --> S00_01
-  S00_01 -->|"credentials accepted; session established"| destination
-  S00_01 -->|"credentials rejected; user retries"| S00_01
-```
-
-The sign-in flow ends at the destination the user originally requested. The destination may belong to another EcoTrace feature and is therefore outside this Feature 4 screen list.
-
-## 2. Production Department
+## 1. Production Department
 
 ```mermaid
 flowchart LR
@@ -32,7 +17,7 @@ flowchart LR
 
 The batch carbon intensity is calculated in the background (FR-01-03); `S-F01-04` only displays it.
 
-## 3. Procurement & Raw Materials Department
+## 2. Procurement & Raw Materials Department
 
 ```mermaid
 flowchart LR
@@ -52,7 +37,7 @@ flowchart LR
   S01_05 -->|"returns to workspace"| workspace
 ```
 
-## 4. Sustainability & ESG Department
+## 3. Sustainability & ESG Department
 
 ```mermaid
 flowchart LR
@@ -74,7 +59,7 @@ flowchart LR
 
 The traceability links between raw material, production batch and shipment are created in the background when records are saved (FR-01-07); `S-F01-06` only displays them.
 
-## 5. Export Sales & Marketing / Procurement & Raw Materials Department
+## 4. Export Sales & Marketing / Procurement & Raw Materials Department
 
 ```mermaid
 flowchart LR
@@ -101,7 +86,7 @@ flowchart LR
 
 UC-04 (`S-F01-01`) is an optional preparation step for Export Sales & Marketing when valid shipment PCF is not yet available. With existing verified carbon/PCF inputs, Export Sales & Marketing or Procurement & Raw Materials proceeds directly to UC-07 (`S-F02-01`).
 
-## 6. Compliance / Product Owner
+## 5. Compliance / Product Owner
 
 ```mermaid
 flowchart LR
@@ -129,7 +114,7 @@ flowchart LR
 
 `M-F02-03` is a confirmation modal over `S-F02-03`, **not** another screen. Access-denied, invalid-draft and cancellation outcomes are states of existing screens, not separate Screen IDs. UC-08 covers FR-02-14 to FR-02-17 and shared access/audit controls.
 
-## 7. Customers
+## 6. Customers
 
 ```mermaid
 flowchart LR
@@ -147,7 +132,7 @@ flowchart LR
   S_F03_02 -->|"returns to workspace"| workspace
 ```
 
-## 8. System Admin
+## 7. System Admin
 
 ```mermaid
 flowchart LR
@@ -164,7 +149,7 @@ flowchart LR
   S04_01 -->|"returns to workspace"| workspace
   S04_02 -->|"returns to workspace"| workspace
 ```
-## 9. Auditor / System Admin
+## 8. Auditor / System Admin
 
 ```mermaid
 flowchart LR
