@@ -44,7 +44,7 @@ docs/
 | 10 | L6 | [W6_CashFlow.md](docs/function-list/W6_CashFlow.md) | Cash flow, NPV, IRR and payback under three scope scenarios |
 | 11 | L7 | [activity-index.md](docs/activity/activity-index.md), [AD-UC-01.md](docs/activity/AD-UC-01.md), [AD-UC-02.md](docs/activity/AD-UC-02.md), [AD-UC-04.md](docs/activity/AD-UC-04.md), [AD-UC-05.md](docs/activity/AD-UC-05.md), [AD-UC-06.md](docs/activity/AD-UC-06.md), [AD-UC-07.md](docs/activity/AD-UC-07.md), [AD-UC-08.md](docs/activity/AD-UC-08.md), [AD-UC-09.md](docs/activity/AD-UC-09.md), [AD-UC-10.md](docs/activity/AD-UC-10.md), [AD-UC-11.md](docs/activity/AD-UC-11.md) | Activity Diagram index and all existing AD files; AD-UC-05 is still the teacher's LabDesk worked example, not the EcoTrace Scope 3 diagram |
 | 12 | L8 | [usage-flow.md](docs/external-design/usage-flow.md) | Actor-organized usage flows connected to use cases, activity diagrams and screen IDs |
-| 13 | L8 | [screen-list.md](docs/external-design/screen-list.md), [screen-transition.md](docs/external-design/screen-transition.md), [ui-conventions.md](docs/external-design/ui-conventions.md) | EcoTrace screen inventory and navigation; UI conventions file is still a LabDesk worked example |
+| 13 | L8 | [screen-list.md](docs/external-design/screen-list.md), [screen-transition.md](docs/external-design/screen-transition.md), [ui-conventions.md](docs/external-design/ui-conventions.md) | EcoTrace screen inventory, navigation and product-wide UI conventions |
 | 14 | L8 | [screen-spec-S-F01-02.md](docs/external-design/screens/screen-spec-S-F01-02.md) | Teacher's LabDesk Screen Spec worked example, not an EcoTrace Screen Spec |
 | all | all | [ai-log.md](docs/project/ai-log.md) | Teacher's LabDesk AI-log worked example; no EcoTrace-specific log entered here yet |
 
@@ -59,8 +59,7 @@ Every file refers to the others by ID, never by retelling them:
 - `S-Fxx-nn` screens appear in the Screen List, Usage Flow and Screen Transition Diagram.
 
 Some files still show the course's LabDesk worked example rather than EcoTrace work:
-`project-brief.md`, `ai-log.md`, `ui-conventions.md`, the sample
-`screen-spec-S-F01-02.md` and `AD-UC-05.md`. The EcoTrace activity for UC-05 has
+`project-brief.md`, `ai-log.md`, the sample `screen-spec-S-F01-02.md` and `AD-UC-05.md`. The EcoTrace activity for UC-05 has
 not replaced that sample. There is no `AD-UC-03.md` or `AD-UC-12.md` in the current
 repository, and the Use Case Diagram lists SD-UC-03, SD-UC-05 and SD-UC-12 without matching
 files. The Activity Index distinguishes completed files from these gaps.
