@@ -9,8 +9,9 @@ diagram, so a reader can see that the decision was made on purpose.
 |---|---|---|---|---|---|
 | 1 | UC-01 is "Submit production & energy data" in W0, but "Submit supplier & raw material carbon data" in the Use Case Diagram, W1 and AD-UC-01 | W0 / Use Case Diagram | Confirm the approved UC-01 name and actor, then align the source documents | Not assigned | Open |
 | 2 | `AD-UC-05.md` describes LabDesk no-show seats, not EcoTrace UC-05 "Perform Scope 3 assessment" | Activity Diagram | Replace the teaching example with an EcoTrace UC-05 activity if a diagram is required | Not assigned | Open |
-| 3 | SD-UC-05 and SD-UC-12 are listed in the Use Case Diagram, but the corresponding files are absent | Sequence Diagrams | Complete or formally account for the missing sequence diagrams before final cross-check | Not assigned | Open |
+| 3 | SD-UC-05 is listed in the Use Case Diagram, but the corresponding file is absent | Sequence Diagrams | Complete or formally account for the missing sequence diagram before final cross-check | Not assigned | Open |
 | 4 | AD-UC-04 refers to proposed `FR-01-09`, while W1 currently stops at `FR-01-08` for F-01 | W1 / AD-UC-04 | Decide whether to add the requirement to W1 or align the AD to existing approved FRs | Not assigned | Open |
+| 5 | The Screen List marks S-F04-02 (Audit Log Viewer) as Must for reviewing system activity, but W1 FR-04-04 only specifies automatic recording; FR-04-03 is traced to UC-11 | W1 / Screen List | Confirm whether audit-log viewing needs an explicit FR or whether the viewer should be deferred/reclassified | Not assigned | Open |
 
 ## Use cases
 
@@ -32,7 +33,7 @@ covers two use cases.
 | UC-09 | Compare and recommend green steel options | F-03 | Must | `AD-UC-09.md` | Present; review not stated | |
 | UC-10 | Authenticate and sign in to the platform | F-04 | Must | `AD-UC-10.md` | Draft; source reconciliation pending | |
 | UC-11 | Configure Role-Based Access Control (RBAC) and system authorization | F-04 | Must | `AD-UC-11.md` | Present; review not stated | |
-| UC-12 | Monitor, track, and export system audit logs | F-04 | Must | Not provided | Open | |
+| UC-12 | Monitor, track, and export system audit logs | F-04 | Must | `AD-UC-12.md` | Present; Must-only FR-04-04; FR-04-05/-06 Should excluded; viewer scope clarification pending | |
 
 Object state lists collected from all diagrams (copy into the data model in DBIZ3):
 
@@ -47,3 +48,4 @@ Object state lists collected from all diagrams (copy into the data model in DBIZ
 | CBAM Exposure Report | Generated |
 | CBAM regulatory rule set | Draft; Active / future-effective (exact status enum not finalized) |
 | Comparison & Recommendation Results | Calculated, Ranked |
+| Audit log entry | Recorded (immutable is a property, not a status enum) |
