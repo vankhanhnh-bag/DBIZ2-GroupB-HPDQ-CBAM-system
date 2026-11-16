@@ -26,7 +26,7 @@ covers two use cases.
 | UC-02 | Manage GHG methodology & emission factors | F-01 | Must | `AD-UC-02.md` | Present; review not stated | |
 | UC-03 | Access batch carbon intensity | F-01 | Must | `AD-UC-03.md` | Present; Must-only FR-01-03; FR-01-04 Should excluded; review pending | |
 | UC-04 | Calculate shipment-level PCF | F-01 | Must | `AD-UC-04.md` | Present; FR-01-09 unresolved | |
-| UC-05 | Perform Scope 3 assessment | F-01 | Should | Not provided (current `AD-UC-05.md` is LabDesk) | Open | |
+| UC-05 | Perform Scope 3 assessment | F-01 | Should | Not provided | Open | |
 | UC-06 | View carbon traceability record | F-01 | Must | `AD-UC-06.md` | Draft; FR-01-07 Must slice only | |
 | UC-07 | Estimate & analyze CBAM exposure for shipment | F-02 | Must | `AD-UC-07.md` | Draft | |
 | UC-08 | Manage CBAM regulatory rules & parameters | F-02 | Must | `AD-UC-08.md` | Draft; review pending | |
