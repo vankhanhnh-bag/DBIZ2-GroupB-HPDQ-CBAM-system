@@ -21,28 +21,29 @@
 ## 1. Diagram
 
 ```mermaid
-swimlane-beta TB
-  subgraph SYS["EcoTrace system"]
-    start@{ shape: sm-circ }
-    s1("Receive a newly created supplier, production, or shipment record for linkage (FR-01-07)")
-    d1{"Which type of record was created?"}
-    s2("Identify supplier record and its raw-material source references (FR-01-07)")
+flowchart TB
+  subgraph SYS["EcoTrace System"]
+    start1@{ shape: sm-circ }
+    s1("Receive a newly created supplier, production, or shipment record event (FR-01-07)")
+    d1{"What type of record was created?"}
+    s2("Identify supplier and associated raw-material source references (FR-01-07)")
     s3("Identify production batch and consumed raw-material references (FR-01-07)")
-    s4("Identify shipment record and its shipped production-batch references (FR-01-07)")
-    m1{" "}
-    s5("Retrieve the created record and its referenced lineage records (FR-01-07)")
-    s6("Resolve applicable upstream raw-material source relationships (FR-01-07)")
-    s7("Resolve applicable downstream shipped-batch relationships (FR-01-07)")
+    s4("Identify shipment and shipped production-batch references (FR-01-07)")
+    s5("Retrieve the new record and its available lineage references (FR-01-07)")
+    s6("Resolve applicable upstream raw-material sources (FR-01-07)")
+    s7("Resolve applicable downstream shipped batches (FR-01-07)")
     s8("Build or update supplier-to-material-to-production-to-shipment relationships (FR-01-07)")
-    s9("Persist the applicable traceability links in the traceability model (FR-01-07)")
-    o1["Traceability chain [Linked / updated]"]
-    stop@{ shape: fr-circ }
+    s9("Persist traceability nodes and relationship edges (FR-01-07)")
+    stop1@{ shape: fr-circ }
 
-    start --> s1 --> d1
-    d1 -->|"[Supplier record]"| s2 --> m1
-    d1 -->|"[Production record]"| s3 --> m1
-    d1 -->|"[Shipment record]"| s4 --> m1
-    m1 --> s5 --> s6 --> s7 --> s8 --> s9 --> o1 --> stop
+    start1 --> s1 --> d1
+    d1 -->|"Supplier record"| s2
+    d1 -->|"Production record"| s3
+    d1 -->|"Shipment record"| s4
+    s2 --> s5
+    s3 --> s5
+    s4 --> s5
+    s5 --> s6 --> s7 --> s8 --> s9 --> stop1
   end
 ```
 
