@@ -29,4 +29,5 @@ sequenceDiagram
     DB-->>ACC: Audit entry persisted
 
     Note over ACC,DB: Audit recording is automatic&#59; no manual edit or deletion is part of this Must flow.
+end
 ```
