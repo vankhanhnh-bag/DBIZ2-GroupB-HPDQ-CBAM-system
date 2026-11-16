@@ -40,7 +40,7 @@ The supplied concept mockup is a visual reference only. It is not the source for
 
 | # | Element | Type | Content / data source | Required | Validation / behaviour |
 |---|---|---|---|---|---|
-| 1 | App shell | Navigation shell | EcoTrace feature navigation; current signed-in role | Yes | Only show destinations permitted for the signed-in role; authorization remains enforced by the platform (FR-04-03). |
+| 1 | App shell | Navigation shell | EcoTrace feature navigation; current signed-in role | Yes | For standard operational users, show Overview, applicable F-01 / F-02 / F-03 destinations and Help & Support only; hide F-04 administration links. Sign-in is a shared entry screen, not a sidebar item. F-04 navigation is reserved for authorized System Admins / Auditors. Authorization remains enforced by the platform (FR-04-03). |
 | 2 | Breadcrumb and page title | Header | Carbon Traceability & PCF / Shipment PCF | Yes | Current page is clearly identified. |
 | 3 | Shipment selector | Select / searchable input | Shipment identifier and related order/product context retrieved from SAP S/4HANA (SD-UC-04) | Yes | A shipment must be selected before calculation is requested. Preserve the source-system identifier. |
 | 4 | Calculate PCF | Primary button | Static action label | Yes | Enabled only when a shipment is selected; disable while the request is being processed. |
