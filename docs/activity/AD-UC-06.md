@@ -20,7 +20,7 @@
 
 ## 1. Diagram
 
-\`\`\`mermaid
+```mermaid
 swimlane-beta TB
   subgraph SYS["EcoTrace system"]
     start@{ shape: sm-circ }
@@ -44,7 +44,7 @@ swimlane-beta TB
     d1 -->|"[Shipment record]"| s4 --> m1
     m1 --> s5 --> s6 --> s7 --> s8 --> s9 --> o1 --> stop
   end
-\`\`\`
+```
 
 Reading notes:
 
