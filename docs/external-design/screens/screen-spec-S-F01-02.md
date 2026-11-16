@@ -49,7 +49,7 @@ The screen must not use invented live supplier names, material values, quantitie
 
 | # | Element | Type | Content / data source | Required | Validation / behaviour |
 |---|---|---|---|---|---|
-| 1 | Application shell | Sidebar + top bar | EcoTrace navigation; signed-in role / department | Yes | Current destination is highlighted. Other destinations are subject to the shared authorization gate (FR-04-03). |
+| 1 | Application shell | Sidebar + top bar | EcoTrace navigation; signed-in role / department | Yes | Use the standard operational-user sidebar: Overview, F-01 / F-02 / F-03 destinations and Help & Support. Do not show F-04 admin links on this screen. Sign-in is not a sidebar item; F-04 navigation is reserved for authorized System Admins / Auditors (FR-04-03). |
 | 2 | Breadcrumb and page title | Header | Carbon Traceability & PCF / Supplier & Raw Material Data | Yes | Identifies the current screen. |
 | 3 | Supplier identity | Text input / searchable select (control type TBD) | Supplier identity supplied by Procurement for the delivery (FR-01-01) | Yes | Must capture the supplier identity. Whether users select an existing supplier or enter free text is not defined. |
 | 4 | Raw material type | Select / text input (control type TBD) | Raw material type supplied by Procurement for the delivery (FR-01-01) | Yes | Must capture the material type. The controlled vocabulary / allowed values are not defined. |
