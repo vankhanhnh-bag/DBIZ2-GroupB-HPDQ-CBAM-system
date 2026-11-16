@@ -9,7 +9,7 @@ diagram, so a reader can see that the decision was made on purpose.
 |---|---|---|---|---|---|
 | 1 | UC-01 is "Submit production & energy data" in W0, but "Submit supplier & raw material carbon data" in the Use Case Diagram, W1 and AD-UC-01 | W0 / Use Case Diagram | Confirm the approved UC-01 name and actor, then align the source documents | Not assigned | Open |
 | 2 | `AD-UC-05.md` describes LabDesk no-show seats, not EcoTrace UC-05 "Perform Scope 3 assessment" | Activity Diagram | Replace the teaching example with an EcoTrace UC-05 activity if a diagram is required | Not assigned | Open |
-| 3 | SD-UC-03, SD-UC-05 and SD-UC-12 are listed in the Use Case Diagram, but the corresponding files are absent | Sequence Diagrams | Complete or formally account for the missing sequence diagrams before final cross-check | Not assigned | Open |
+| 3 | SD-UC-05 and SD-UC-12 are listed in the Use Case Diagram, but the corresponding files are absent | Sequence Diagrams | Complete or formally account for the missing sequence diagrams before final cross-check | Not assigned | Open |
 | 4 | AD-UC-04 refers to proposed `FR-01-09`, while W1 currently stops at `FR-01-08` for F-01 | W1 / AD-UC-04 | Decide whether to add the requirement to W1 or align the AD to existing approved FRs | Not assigned | Open |
 
 ## Use cases
@@ -23,7 +23,7 @@ covers two use cases.
 |---|---|---|---|---|---|---|
 | UC-01 | Submit supplier & raw material carbon data | F-01 | Must | `AD-UC-01.md` | Present; review not stated | |
 | UC-02 | Manage GHG methodology & emission factors | F-01 | Must | `AD-UC-02.md` | Present; review not stated | |
-| UC-03 | Access batch carbon intensity | F-01 | Must | Not provided | Open | |
+| UC-03 | Access batch carbon intensity | F-01 | Must | `AD-UC-03.md` | Present; Must-only FR-01-03; FR-01-04 Should excluded; review pending | |
 | UC-04 | Calculate shipment-level PCF | F-01 | Must | `AD-UC-04.md` | Present; FR-01-09 unresolved | |
 | UC-05 | Perform Scope 3 assessment | F-01 | Should | Not provided (current `AD-UC-05.md` is LabDesk) | Open | |
 | UC-06 | View carbon traceability record | F-01 | Must | `AD-UC-06.md` | Draft; FR-01-07 Must slice only | |
@@ -39,6 +39,7 @@ Object state lists collected from all diagrams (copy into the data model in DBIZ
 | Object | States |
 |---|---|
 | GHG Methodology & Emission Factor | Created, Versioned |
+| Batch carbon intensity result | Calculated (persistence not specified; see AD-UC-03 open question) |
 | Shipment PCF | Calculated |
 | Supplier / production / shipment traceability records | Created; linked in the traceability model |
 | Traceability graph | Existing or initial graph, Updated (logical states) |
