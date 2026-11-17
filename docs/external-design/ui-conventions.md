@@ -6,7 +6,8 @@
 
 ## Visual direction
 
-The initial mockup is the **visual reference**, not a source of functional requirements. Keep its Hòa Phát navy / EcoTrace green identity, clean white workspace, compact left navigation and data-dashboard feel. Use the approved Hòa Phát and EcoTrace logo assets; do not redraw or approximate the logos.
+The initial mockup is the **visual reference**, not a source of functional requirements. Keep its Hòa Phát navy / EcoTrace green identity, clean white workspace, compact left navigation and data-dashboard feel. Use the approved Hòa Phát logo assets. <img width="7244" height="3622" alt="image" src="https://github.com/user-attachments/assets/bfc25b64-b424-4385-b35f-e6b3cf48117e" />
+
 
 | Token | Proposed value | Usage |
 |---|---|---|
