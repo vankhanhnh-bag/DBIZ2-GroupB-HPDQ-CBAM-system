@@ -14,7 +14,7 @@
 | Use case | `UC-09` Compare and recommend green steel options |
 | Activity diagram | `AD-UC-09` — fetch PCF & data quality (`s5`), calculate carbon intensity & CBAM cost (`s6`), calculate overall score (`s7`), rank and assign Primary / Alternative flags (`s8`), store results (`s9`), and display results (`a2`) |
 | Linked sequence | `SD-UC-09` — steps 8–15: EcoTrace BE calculates weighted score (`8`), stores comparison results in EcoTrace Database (`9–10`), sorts and assigns Primary/Alternative flags (`11`), stores recommendation (`12–13`), returns options to web UI (`14`), and displays options to Customer (`15`) |
-| Mockup image | `img/S-F03-02.png` (covers 4 exported state frames: Loading · Calculating Scores, Success · Recommendation Saved, Partial Carbon Data, System/Data Error) |
+| Mockup image | `img/S-F03-02.png` (covers 5 exported state frames: Default, Loading · Calculating Scores, Success · Recommendation Saved, Partial Carbon Data, System/Data Error) |
 | Status values | `Calculated & Ranked` (object state of Comparison & Recommendation Results in `AD-UC-09` `o1`); recommendation flags displayed per option: `PRIMARY`, `ALTERNATIVE`, `SELECTED`, `REVIEW`, `INCOMPLETE DATA`. |
 
 ## 1. Purpose
