@@ -73,4 +73,60 @@ Illustrative dropdown values and preview notices in the mockups are visual refer
 | Dropdown Open | Active dropdown expands below the field showing available options with a checkmark (`✓`) next to the currently highlighted/selected item (e.g., `Hot-rolled coil (HRC)`). | User clicks/taps any of the 3 criteria dropdowns. | `S-F03-01 — Dropdown Open.pdf` |
 | Criteria Selected | All 3 dropdowns display valid values; helper text updates to *"All 3 criteria selected. Ready to compare..."*; Comparison flow step 1 displays `✓ Validate selected criteria`. | User selects valid values for Product category, Steel grade, and Destination market. | `S-F03-01 — Criteria Selected.pdf` |
 | Validation Error | Red summary banner at top of form (*"2 required criteria are missing"*); missing dropdowns outlined in red with inline error text (*"Please select a steel grade."*, *"Please select a destination market."*); Comparison flow step 1 shows `!`. | User clicks `Compare green steel options` while one or more required criteria are unselected (`AD-UC-09` `d1 [Invalid]`). | `S-F03-01 — Validation Error.pdf` (`s2`) |
-| Loading / Comparing | Primary button label changes to `◌ Comparing…` and is disabled; inline progress card **Preparing your comparison** appears below buttons showing `✓ Criteria validated`, `◌ Retrieving product carbon profiles…`, `○ Calculating weighted scores`. | User
+| Loading / Comparing | Primary button label changes to `◌ Comparing…` and is disabled; inline progress card **Preparing your comparison** appears below buttons showing `✓ Criteria validated`, `◌ Retrieving product carbon profiles…`, `○ Calculating weighted scores`. | User submits all 3 valid criteria (`AD-UC-09` `d1 [Valid]` → `s3`). | `S-F03-01 — Loading · Comparing.pdf` |
+| Empty (No Matching Products) | Selected criteria remain preserved in dropdowns; amber card **NO MATCHING PRODUCTS** explains no verified low-carbon profiles were found for the exact combination and lists 3 adjustment tips; Comparison flow step 2 shows `!`. | Product & Carbon DB returns zero matching records (`AD-UC-09` `d2 [No]` → `s4`). | `S-F03-01 — No Matching Products.pdf` (correction loop back to `m1`) |
+| System / Data Error | Selected criteria remain preserved; red error banner *"Unable to retrieve product carbon profiles"* appears at top of form with an inline `Retry` button and technical reference `ERR-PCDB-503 · Product & Carbon DB unreachable`; Comparison flow step 2 shows `!`. | Product & Carbon DB query (`SD-UC-09` step 4) fails or times out. | `S-F03-01 — System/Data Error.pdf` |
+
+## 5. Interactions and navigation
+
+| # | Element | User action | System response | Goes to screen |
+|---|---|---|---|---|
+| 1 | Product category / Steel grade / Destination market dropdowns | Clicks and selects an option | Opens option list, updates selected criterion, clears field-level validation error if previously invalid, and updates helper/stepper status when all 3 are filled. | Stays on `S-F03-01` |
+| 2 | Compare green steel options | Clicks | Runs client/server parameter validation (`AD-UC-09` `s1`). If invalid, displays Validation Error state (`s2`). If valid, enters Loading state, queries Product & Carbon DB (`s3`), and stores retrieved data (`SD-UC-09` steps 4–7). | `S-F03-02` (if matches found & scores calculated); stays on `S-F03-01` (if validation, no-match, or DB error) |
+| 3 | Reset criteria | Clicks | Resets all 3 dropdowns to default placeholders and dismisses any validation, no-match, or system error banners. | Stays on `S-F03-01` |
+| 4 | Retry (in System/Data Error banner) | Clicks | Re-submits the preserved 3 criteria to Product & Carbon DB without requiring re-entry. | `S-F03-02` (on recovery) or stays on `S-F03-01` |
+| 5 | Sidebar navigation items | Clicks permitted module | Navigates away from `F-03` via the global EcoTrace workspace shell. | Target screen outside `UC-09` |
+
+## 6. Screen-level rules
+
+| Rule ID | Rule | Source |
+|---|---|---|
+| SR-001 | All three comparison criteria (**Product category**, **Steel grade**, and **Destination market**) are mandatory before querying product profiles. | `FR-03-01`; `AD-UC-09` `s1`, `d1` |
+| SR-002 | On validation failure (`d1 [Invalid]`), the system must identify every missing field both in a top summary banner and inline beneath each missing dropdown, initiating a user correction loop without losing already-selected fields. | `AD-UC-09` `s2`; `S-F03-01 — Validation Error` |
+| SR-003 | On zero matching products (`d2 [No]`), the system must preserve the user's current filter values, display the exact queried combination, and provide actionable filter adjustment suggestions rather than showing an empty results board. | `FR-03-02`; `AD-UC-09` `s4`; `S-F03-01 — No Matching Products` |
+| SR-004 | On Product & Carbon DB failure (`ERR-PCDB-503`), user-selected criteria must remain preserved in state and an immediate **Retry** action must be provided. | `SD-UC-09` step 4; `S-F03-01 — System/Data Error` |
+| SR-005 | Duplicate submissions must be blocked while `Comparing…` is in progress. | `UI Conventions`; `S-F03-01 — Loading · Comparing` |
+| SR-006 | Step status and errors must always be communicated via explicit text and icons (`✓`, `!`, `◌`), never by border/banner color alone. | `UI Conventions` |
+
+## 7. Linked requirements
+
+| FR ID | What this screen does for it |
+|---|---|
+| `FR-03-01` (Must) | Captures and validates the user's comparison criteria (product category, steel grade, destination market) before initiating comparison (`FR-03-01-BE`). |
+| `FR-03-02` (Must) | Submits validated filters to query matching green steel product carbon profiles and destination CBAM cost parameters (`FR-03-02-BE`, `FR-03-02-INT`), and handles zero-match filter adjustment guidance. |
+
+## 8. Responsive and accessibility notes
+
+- **Smallest supported width:** `360px` (mobile) and `1280px+` (standard desktop workspace).
+- **What collapses or stacks on a narrow screen:** Below the desktop breakpoint (`< 1024px`), the left workspace sidebar collapses into a slide-over drawer; the two-column main layout stacks vertically with the **Comparison criteria** card on top and **How the comparison works / Comparison flow** below; the 2-column form grid (`Product category` / `Steel grade` and `Destination market` / `Scoring basis`) stacks into a single column.
+- **Information never carried by colour alone:** Validation errors pair red borders with `!` icons and explicit field-level text; stepper progress uses numeric badges (`1`, `2`, `3`), checkmarks (`✓`), spinners (`◌`), and warning icons (`!`).
+- **Text contrast and minimum size:** Minimum body text size `14px` (`12px` for helper/reference tags); all text and interactive controls meet WCAG AA (`>= 4.5:1` contrast ratio). Every dropdown has a visible `<label>` with a required indicator (`*`) and `aria-invalid` / `aria-describedby` bindings on error.
+
+## 9. Open questions
+
+| # | Question | Blocking? | Status |
+|---|---|---|---|
+| 1 | Should **Steel grade** dropdown options be dynamically filtered based on the selected **Product category** (cascading dropdown), or list all grades independently? | No | Open — confirm with `FR-03-01` data dictionary before frontend integration. |
+| 2 | When `d2 [No]` occurs (`S-F03-01 — No Matching Products`), `AD-UC-09` mentions *"Check partial matches or suggest filter adjustments"*. Should v1 display clickable partial-match product cards directly on `S-F03-01`, or keep the current text-based filter adjustment suggestions? | No | Resolved for v1 UI (`S-F03-01 — No Matching Products` displays actionable text suggestions while preserving inputs). |
+| 3 | Are destination markets limited to CBAM jurisdictions (e.g., Germany / EU) or do non-CBAM markets (e.g., Japan in the No Matching Products frame) use local carbon pricing rules under `FR-03-02`? | Yes, for CBAM cost calculation rules | Open — confirm market-to-carbon-rule mapping in `FR-03-02`. |
+
+---
+
+## Completion checklist
+
+- [x] The mockup is referenced as `img/S-F03-01.png` covering all 7 exported UI states.
+- [x] Every visible element in the mockup appears in the element inventory.
+- [x] Every input element has a validation rule or an explicit read-only rule.
+- [x] All states (Default, Dropdown Open, Criteria Selected, Validation Error, Loading, Empty/No Match, System Error) are filled in and traced to `AD-UC-09` / `SD-UC-09`.
+- [x] Every navigation target (`S-F03-02`) exists in the Screen List.
+- [x] Every linked FR (`FR-03-01`, `FR-03-02`) exists in the Function List and `AD-UC-09`.
