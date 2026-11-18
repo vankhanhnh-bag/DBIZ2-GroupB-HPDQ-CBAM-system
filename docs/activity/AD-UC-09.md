@@ -103,11 +103,14 @@ Reading notes:
 
 ## 5. Screens touched
 
-*To be filled in Lesson 8 from the Screen List; no screen IDs have been provided.*
-
 | Actor action | Screen ID |
-| --- | --- |
-| — | Pending Lesson 8 |
+| --- | --- | --- | --- |
+| Input and submit comparison criteria (`a1` — `FR-03-01-BE`, `FR-03-02-BE`) | `S-F03-01` | 
+| Handle validation errors (`d1 [Invalid]` → `s2`) | `S-F03-01` | 
+| Process comparison & load profiles (`d1 [Valid]` → `s3`) | `S-F03-01` |
+| Handle zero matching products / filter adjustments (`d2 [No]` → `s4`) | `S-F03-01` | 
+| Handle database / system unreachable errors (`SD-UC-09` step 4) | `S-F03-01` | 
+| Calculate weighted scores, rank options, assign Primary/Alternative flags, store and display results (`s5`–`s9`, `a2` — `FR-03-03`, `FR-03-04`) | `S-F03-02` |
 
 ## 6. Open questions
 
