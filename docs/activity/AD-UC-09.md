@@ -104,7 +104,7 @@ Reading notes:
 ## 5. Screens touched
 
 | Actor action | Screen ID |
-| --- | --- | --- | --- |
+| --- | --- | 
 | Input and submit comparison criteria (`a1` — `FR-03-01-BE`, `FR-03-02-BE`) | `S-F03-01` | 
 | Handle validation errors (`d1 [Invalid]` → `s2`) | `S-F03-01` | 
 | Process comparison & load profiles (`d1 [Valid]` → `s3`) | `S-F03-01` |
