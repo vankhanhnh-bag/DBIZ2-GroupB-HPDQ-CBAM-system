@@ -83,15 +83,13 @@ The supplied diagram does **not** include explicit UML object-state nodes. “Up
 
 ## 5. Screens touched
 
-Screen IDs cannot be derived from the supplied AD alone. To be filled from the Lesson 8 Screen List.
-
 | System Admin action / outcome | Screen ID |
 |---|---|
-| Request RBAC configuration access | - |
-| Define role and permission assignments | - |
-| Submit role configuration | - |
-| Review updated access policies | -|
-| Access denied (`d1 [not authorized]`) | - |
+| Request RBAC configuration access | `S-F04-01` (User & Access Management); `S-F00-01` (Sign In) first if unauthenticated |
+| Define role and permission assignments | `S-F04-01` (User & Access Management) |
+| Submit role configuration | `S-F04-01` (User & Access Management) |
+| Review updated access policies | `S-F04-01` (User & Access Management; updated/success state) |
+| Access denied (`d1 [not authorized]`) | `S-F04-01` (access-denied state; no separate Screen ID) |
 
 ## 6. Open questions
 
