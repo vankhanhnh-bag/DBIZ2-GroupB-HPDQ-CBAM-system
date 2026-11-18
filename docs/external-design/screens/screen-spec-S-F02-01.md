@@ -31,20 +31,44 @@
 
 ## 2. Mockup
 
-The Figma deliverable should contain editable frames using the shared EcoTrace application shell and UI conventions.
+The current Figma mockup is the visual source of truth for this screen. Keep the existing EcoTrace application shell, layout, component placement, styling and content hierarchy as designed in Figma. This specification documents the current frames; it does not request a redesign or additional UI elements.
 
-| Frame | State / surface |
+**Figma file:** [EcoTrace — S-F02-01 CBAM Estimation & Analysis](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=8-73)
+
+### 2.1 Main screen states
+
+The main screen is represented by five separate editable frames. All five retain the shared Application sidebar, top application bar, page heading/context and Shipment Filter Bar. The Shipment Filter Bar contains the six visible fields: **Order No.**, **Shipment No.**, **Product**, **Net Weight**, **Country of Export** and **Planned Departure**. The primary action is positioned at the right side of this filter area; its label reflects the current state.
+
+| Figma frame | Current mockup content and state |
 |---|---|
-| S-F02-01 — Default | Shipment/order selection and loaded shipment input summary; estimate not yet completed |
-| S-F02-01 — Loading | Shipment data retrieval or CBAM estimate calculation in progress |
-| S-F02-01 — Validation Error | Required shipment, product, carbon or destination data missing/invalid; calculation blocked |
-| S-F02-01 — Calculated Result | Estimated CBAM cost, emissions breakdown, assumptions/source context, scenarios and certificate-price trend where available |
-| M-F02-02 — View Assumptions | Full assumptions, regulation version, reference date and calculation method used |
-| M-F02-01 — Share CBAM Result | Shareable result reference and available sharing options |
+| **S-F02-01 — Default** | Initial CBAM Estimation & Analysis workspace. The Shipment Filter Bar is available for selecting shipment information. The content area shows the empty state (**No CBAM estimate yet**) rather than calculation results. |
+| **S-F02-01 — Empty / Missing-PCF** | Keeps the selected shipment context visible and presents a warning that verified PCF data is unavailable / not verified. The state explains that PCF data is required before calculation and provides the **Open S-F01-01** path to the shipment PCF screen. |
+| **S-F02-01 — Loading** | Keeps the shipment context visible while CBAM estimation is being processed. The Calculate action shows a loading/progress treatment and the content area communicates that the calculation is in progress. |
+| **S-F02-01 — Validation Error** | Keeps the shipment filter context and displays validation feedback for missing or invalid required information. Field-level or inline error treatments identify the information that needs attention; calculation is not presented as completed. |
+| **S-F02-01 — Success** | Keeps the six selected shipment fields in the Shipment Filter Bar. The content area uses the existing **Calculation ready panel** to communicate that calculation is complete and the estimate is ready to review. The primary action remains in the filter area and is labelled **View CBAM Result** in the current mockup. |
 
-The initial visual reference is the EcoTrace concept in `ui-conventions.md`: Hòa Phát navy / EcoTrace green identity, white workspace, compact left navigation, top app bar, breadcrumbs and data-dashboard layout. Use the approved Hòa Phát logo assets. Keep all frames editable; do not flatten a complete screen into a single image.
+### 2.2 Result and assumptions modal frames
 
-Any illustrative shipment names, order numbers, weights, PCF values, certificate prices or estimated costs must be clearly marked as placeholder data. Do not present invented figures as live or verified business data.
+The two modal frames are shown as overlays on top of the underlying CBAM result context. They are separate editable Figma frames for documenting the modal surfaces, not additional standalone application pages.
+
+| Figma frame | Current mockup content and state |
+|---|---|
+| **M-F02-01 — CBAM Result & Share** | Main result modal over a backdrop and underlying shipment summary/page context. The modal presents the CBAM result using KPI cards, a tabbed calculation-breakdown area/table, and the available actions **View Assumptions**, **Share** and **Download Report**. |
+| **M-F02-02 — View Assumptions** | Assumptions modal layered above the underlying M-F02-01 result modal. The backdrop and underlying result context remain visible to communicate the modal hierarchy. The foreground modal presents the assumptions for the current estimate, including regulation version, price reference date and calculation method, with a close action. |
+
+### 2.3 Frame links
+
+- [Default](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=135-110)
+- [Empty / Missing-PCF](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=135-277)
+- [Loading](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=135-447)
+- [Validation Error](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=135-613)
+- [Success](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=135-793)
+- [M-F02-01 — CBAM Result & Share](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=135-961)
+- [M-F02-02 — View Assumptions](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=135-1143)
+
+All seven frames remain editable in Figma. The mockup's illustrative figures, if present, are visual placeholders and must not be treated as live or verified business data. This section records the current visual design only; functional rules and requirement traceability remain defined in the sections below.
+
+
 
 ## 3. Element inventory
 
