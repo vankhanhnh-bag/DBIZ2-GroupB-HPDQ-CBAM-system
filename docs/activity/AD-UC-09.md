@@ -101,7 +101,6 @@ Reading notes:
 | --- | --- | --- |
 | Comparison & Recommendation Results | Calculated & Ranked | Pending agreement; do not introduce other status values without team sign-off |
 
-## 5. Screens touched
 
 ## 5. Screens touched
 
