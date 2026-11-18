@@ -82,11 +82,12 @@ Reading notes:
 
 ## 5. Screens touched
 
-*To be filled in Lesson 8 from the Screen List; no screen IDs have been provided.*
-
-| Actor action | Screen ID |
+| Actor action / outcome | Screen ID |
 |---|---|
-| — | Pending Lesson 8 |
+| Provide credentials or OTP (`a1`) | `S-F00-01` (Sign In) |
+| Review rejected sign-in (`a2`; `d1 [invalid]`) | `S-F00-01` (invalid-credentials error state) |
+| Review access denial (`a3`; `d2 [not authorized]`) | Requested protected screen (access-denied state; no separate Screen ID). For F-04 destinations: `S-F04-01` (User & Access Management) or `S-F04-02` (Audit Log Viewer), as applicable. |
+| Access authorized platform functions (`a4`; `d2 [authorized]`) | Authorized destination screen, depending on role and requested function. For F-04: `S-F04-01` (UC-11) or `S-F04-02` (UC-12). |
 
 ## 6. Open questions
 
