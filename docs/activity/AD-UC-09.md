@@ -104,12 +104,12 @@ Reading notes:
 
 ## 5. Screens touched
 
-| Screen / actor action | Screen  |
+| Customer / Procurement action | Screen ID |
 |---|---|
-| Customer inputs and submits comparison criteria (`S-F03-01` Green Steel Filter & Comparison Criteria) | Handled within UC-09 (`FR-03-01`, `FR-03-02`); primary entry screen for criteria filtering and validation error handling. |
-| Customer reviews weighted scores, ranked recommendations, and selects/saves the preferred option (`S-F03-02` Green Steel Comparison & Recommendation Board) | Handled within UC-09 (`FR-03-03`, `FR-03-04`); displays scoring results, Primary/Alternative flags, and persistence handling. |
-| Detailed product carbon profile view linked from the recommendation board | Outside UC-09; handled by originating feature `F-01` (Carbon Traceability & PCF). |
-
+| Select product category, steel grade, and destination market; submit comparison criteria | `S-F03-01` — Green Steel Filter & Comparison Criteria |
+| Review validation errors or zero-match feedback, adjust criteria/filters, and resubmit | `S-F03-01` — `Validation Error` / `No Matching Products` states |
+| Review weighted scores, ranked options, and Primary / Alternative flags; select and save preferred option | `S-F03-02` — Green Steel Comparison & Recommendation Board (`Partial Carbon Data` / `Success · Recommendation Saved` states) |
+| Sign in and verify authorization before opening the comparison interface (precondition only; not part of UC-09 activity) | `S-F00-01` — Sign in (`UC-10`) |
 ## 6. Open questions
 
 | # | Question | Blocking? | Default applied |
