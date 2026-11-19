@@ -71,13 +71,17 @@ No decision nodes are included. FR-04-04 specifies automatic logging when a user
 
 ## 5. Screens touched
 
-The Must activity is automatic and does not require the System Admin / Auditor to open a screen or manually create a log entry.
+The Must activity automatically records a system-altering event; it does not require the System Admin / Auditor to manually create or edit an audit-log entry.
 
-| Screen / actor action | Status |
+| Actor action / outcome | Screen ID |
 |---|---|
-| Originating feature screen used by the user who performs a system-altering action | Outside UC-12; depends on the originating use case |
-| S-F04-02 Audit Log Viewer (System Admin / Auditor) | Listed in the Screen List, but read/search/display behavior is not explicitly specified by a W1 Must FR; not modeled in this Must activity |
-| Audit report export (CSV/PDF) | Excluded: FR-04-05 and FR-04-06 are Should |
+| Sign in before opening the audit area (precondition only; UC-10, not part of the UC-12 recording activity) | `S-F00-01` — Sign In |
+| Perform a system-altering action in the originating EcoTrace feature (trigger for the audit event) | Varies by originating use case; outside UC-12, so no single Screen ID applies |
+| EcoTrace automatically records the immutable audit-log entry (FR-04-04, Must) | N/A — background system processing; no dedicated user screen |
+| System Admin / Auditor opens the audit area to review recorded system activity (related viewer interaction; not modeled in the FR-04-04 Must recording flow) | `S-F04-02` — Audit Log Viewer |
+| Export audit logs as CSV/PDF (FR-04-05 and FR-04-06, Should; excluded from this Must activity) | Not explicitly mapped to an export screen in the current Screen List. `S-F04-02` is the related audit area, but its mapping to the export FRs needs confirmation. |
+
+Screen IDs above are taken from the Screen List and Screen Transition Diagram. The detailed `screen-spec-S-F04-02.md` is not present in the repository, so no additional viewer controls or export interactions are assumed.
 
 ## 6. Open questions
 
