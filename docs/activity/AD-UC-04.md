@@ -4,16 +4,16 @@
 | --- | --- |
 | AD ID | AD-UC-04 |
 | Use case | UC-04 Calculate shipment-level PCF |
-| Feature | F-01 Carbon Traceability & Product Carbon Footprint Management |
+| Feature | F-01 — Carbon Traceability & Product Carbon Footprint Management |
 | Primary actor | Export Sales & Marketing |
 | Lanes | Export Sales & Marketing · EcoTrace · Logistics Partner (Hoa Phat Logistics) |
-| Inputs (L3-L5) | Context Diagram (provided) · Use Case Diagram (provided) · Sequence: SD-UC-04 (provided image) · W0 Table 1 · W1 FR-01-05 (cross-reference: FR-01-07, FR-01-09) |
+| Inputs (L3–L5) | Context Diagram; Use Case Diagram; SD-UC-04; W0 Table 1 and Table 2; W1 FR-01-03, FR-01-05 and FR-01-07; W4 Prioritization; Architecture; Screen List; Usage Flow; Screen Transition; Screen Spec S-F01-01 |
 | Trigger | An Export Sales & Marketing user selects a shipment and requests its PCF. |
-| Preconditions | Access is authorized under the common platform rules (UC-10/UC-11). |
+| Preconditions | The Export Sales & Marketing user is signed in and authorized to use shipment PCF functions (shared UC-10 sign-in and FR-04-03 authorization gate). Shipment/order data, constituent-batch linkage/intensity and applicable logistics emissions are available for the nominal calculation path. |
 | Success end state | The shipment-level PCF has been calculated from constituent-batch carbon intensities and applicable logistics emissions, stored, and shown to the requester. |
 | Failure end state | No PCF is calculated; the system reports that required shipment, batch-intensity, or linkage data is missing. |
-| FRs covered | FR-01-05, FR-01-09 (new — reported to integrator, not yet in W1) |
-| Business rules applied | None supplied for UC-04. |
+| FRs covered | FR-01-05 (Must, direct UC-04 calculation); FR-01-03 and FR-01-07 are supporting batch-intensity/linkage inputs. The missing-data branch uses proposed FR-01-09, which is not present in W1 and is not an approved FR. |
+| Business rules applied | FR-01-05 defines shipment PCF as an aggregation of constituent-batch carbon intensity and applicable logistics emissions. No separately numbered BR ID is supplied in the current repository. |
 
 ## 1. Diagram
 
@@ -79,23 +79,27 @@ Reading notes:
 
 | Object | States in this diagram | Full state list (all diagrams) |
 |---|---|---|
-| Shipment PCF | Calculated | Pending agreement; do not introduce other status values without team sign-off |
+| Shipment PCF | Calculated | Calculated is the state shown in this activity and screen spec; no further lifecycle-status enumeration is specified in W1. Persistence is described in SD-UC-04 / Screen Spec but remains a requirement-traceability question. |
 
 ## 5. Screens touched
 
-*To be filled in Lesson 8 from the Screen List; no screen IDs have been provided.*
+The user-facing selection, request, missing-data feedback and calculated-result review occur on S-F01-01. The Logistics Partner's emissions exchange is an external system interaction, not a separate EcoTrace screen.
 
-| Actor action | Screen ID |
+| Actor action / outcome | Screen ID |
 |---|---|
-| — | Pending Lesson 8 |
+| Select a shipment and request shipment-level PCF calculation | S-F01-01 — Shipment-level PCF Calculation |
+| Review missing shipment/batch/linkage data notice on the no-data path | S-F01-01 — Missing-data notice state (the associated FR-01-09 is proposed and not present in W1) |
+| Review the calculated shipment-level PCF, batch inputs and applicable logistics emissions | S-F01-01 — Success / calculated state |
+| Provide shipment logistics emissions to EcoTrace | N/A — Hoa Phat Logistics external integration; no EcoTrace user screen is identified |
+| Sign in before opening shipment PCF (precondition only; not part of UC-04 activity) | S-F00-01 — Sign in (UC-10) |
 
 ## 6. Open questions
 
 | # | Question | Blocking? | Default applied |
-| --- | --- | --- | --- |
-| 1 | [NEEDS CLARIFICATION: What should EcoTrace do if shipment-to-batch linkage, batch intensity, or logistics emissions are missing or invalid?] | No | Resolved in this version: decision `d1` added, routed to a new NC function `FR-01-09` reported to the integrator for W1. |
-| 2 | [NEEDS CLARIFICATION: Does FR-01-05 require permanent PCF record storage?] | No | Resolved in this version: persistence step `s6` added under FR-01-05, matching SD-UC-04 step 10. |
-| 3 | [NEEDS CLARIFICATION: Should SAP S/4HANA be listed as an external system in the Context Diagram, or is it intentionally represented by Internal Departments?] | No | SAP remains a named source in a system action, not an extra AD lane. |
+|---|---|---|---|
+| 1 | What should EcoTrace do if shipment-to-batch linkage, batch intensity, or logistics emissions are missing or invalid? | Yes — for complete failure-path and FR traceability | The current AD shows a missing-data notice and blocks calculation, matching the Screen Spec and proposed FR-01-09. However, FR-01-09 is absent from W1; do not treat this branch as an approved Must requirement until W1 is updated. |
+| 2 | Does FR-01-05 formally require permanent storage of the shipment-level PCF? | Yes — for persistence traceability | SD-UC-04 and Screen Spec S-F01-01 say the calculated PCF is stored in PCF Records; the current W1 FR-01-05 SHALL says calculate. Confirm whether W1 should explicitly include persistence or whether it is an approved design detail. |
+| 3 | The Context Diagram labels the incoming information as SAP / ERP data from Technology & Digital Transformation, while Architecture identifies SAP S/4HANA as an external system connected through the Integration Adapter. Should the Context Diagram be updated to show the same system boundary and integration? | No — for the activity's screen mapping; yes for cross-document consistency | Keep SAP S/4HANA as a named data source in the system action; do not add an extra AD lane. |
 
 ## 7. Verification log
 
@@ -105,9 +109,9 @@ Reading notes:
 | Every decision has guards on all outgoing flows, no overlap, no gap | Pass (d1: [yes]/[no]) | | |
 | No action has two incoming flows (merge used instead) | Pass (no shared entry points) | | |
 | Every fork has a matching join | N/A (no forks) | | |
-| Every system action cites an FR | Pass; FR-01-09 flagged as new, pending W1 | | |
-| Every FR of this use case appears in the diagram | FR-01-05: yes. FR-01-09: new, to be added to W1 | | |
-| Lane names match the Context Diagram and the use case actors; no Web App, API or database lanes | Pass | | |
+| Every system action cites an FR | Core PCF calculation actions trace to FR-01-05 and supporting input FRs; missing-data action s3 is explicitly linked to proposed FR-01-09, not present in W1 (Q1) | Assistant (source cross-check) | 2026-11-19 |
+| Every Must FR of UC-04 appears in the diagram | Pass — FR-01-05 is the direct Must requirement; FR-01-03/FR-01-07 are supporting inputs. FR-01-09 remains proposed and unapproved (Q1). | Assistant (source cross-check) | 2026-11-19 |
+| Lane names match the Context Diagram and the use case actors; no Web App, API or database lanes | Pass — Export Sales & Marketing is the initiating actor; Hoa Phat Logistics is the external logistics party in the Context Diagram | Assistant (source cross-check) | 2026-11-19 |
 | Related sequence diagram uses the same names and FR IDs; its alt fragments appear here as decisions | Pass against SD-UC-04 | | |
 | AI critic prompt run, findings resolved or logged as open questions | Done; 2 prior open questions resolved, 1 remains informational | | |
 
