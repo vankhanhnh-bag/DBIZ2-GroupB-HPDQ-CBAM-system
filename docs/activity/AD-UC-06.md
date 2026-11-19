@@ -99,7 +99,8 @@ The Must behavior is automatic background linkage and does not require a user to
 | Screen / actor action | Status |
 |---|---|
 | S-F01-06 — Carbon Traceability Record | Related viewer screen in the Screen List; not an action in this Must-only activity because its select-and-display behavior is FR-01-08 (Should). The Screen List currently labels S-F01-06 as Must and maps it to both FR-01-07 and FR-01-08; see Open Question 6. |
-| Select a shipped product batch and view its full carbon traceability record | Excluded from this diagram: FR-01-08 (Should) |
+| Select a shipped product batch and view its full carbon traceability record | S-F01-06 — Carbon Traceability Record; excluded from this Must-only diagram because FR-01-08 is Should |
+| Sign in before opening the viewer (precondition only; not part of background FR-01-07 linkage) | S-F00-01 — Sign in (UC-10) |
 
 ## 6. Open questions
 
