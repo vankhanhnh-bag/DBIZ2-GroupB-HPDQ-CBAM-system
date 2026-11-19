@@ -2,10 +2,10 @@
 | --- | --- |
 | AD ID | AD-UC-02 |
 | Use case | UC-02 Manage methodology versions and emission factors |
-| Feature | GHG Methodology & Emission Factor Version Management |
-| Primary actor | Sustainability & ESG user |
+| Feature | F-01 — Carbon Traceability & Product Carbon Footprint Management |
+| Primary actor | Sustainability & ESG user (Sustainability & ESG Department) |
 | Lanes | Sustainability & ESG user · EcoTrace system |
-| Inputs (L3–L5) | Supplied AD-UC-02 Mermaid diagram, Context Diagram, Use Case Diagram, corresponding Sequence Diagram (SD-UC-02), Architecture, and W1/FR baseline |
+| Inputs (L3–L5) | Context Diagram; Use Case Diagram; SD-UC-02; W0 Table 1 and Table 2; W1 FR-01-02; W4 Prioritization; Architecture; Screen List; Usage Flow; Screen Transition |
 | Trigger | The Sustainability & ESG user enters and submits methodology version, factor value, unit, and effective date. |
 | Preconditions | The user must have access to the methodology management interface with valid authentication and authorization. |
 | Success end state | EcoTrace successfully validates inputs, checks for existing factors/justifications, creates/version-controls the record, writes to the GHG library and audit log, and displays a saved confirmation to the user. |
@@ -84,23 +84,29 @@ Reading notes:
 
 | Object | States in this diagram | Full state list (all diagrams) |
 | --- | --- | --- |
-| GHG Methodology & Emission Factor | Created / Versioned | Pending agreement; do not introduce other status values without team sign-off |
+| GHG Methodology & Emission Factor | Created / Versioned | W1 FR-01-02 specifies storing/versioning methodology and factor values; no further lifecycle-status enumeration is defined in the current source set. |
 
 ## 5. Screens touched
 
-*To be filled in Lesson 8 from the Screen List; no screen IDs have been provided.*
+The configuration, validation-feedback, justification and save-confirmation interactions take place on the GHG Methodology & Emission Factor Library screen.
 
-| Actor action | Screen ID |
-| --- | --- |
-| — | Pending Lesson 8 |
+| Sustainability & ESG user action / outcome | Screen ID |
+|---|---|
+| Open the methodology and emission-factor library; enter methodology version, factor value, unit and effective date | S-F01-03 — GHG Methodology & Emission Factor Library |
+| For an existing factor/version, provide the change justification requested by the system | S-F01-03 — GHG Methodology & Emission Factor Library |
+| Review validation errors or a missing-justification prompt | S-F01-03 — GHG Methodology & Emission Factor Library |
+| Review saved/versioned confirmation | S-F01-03 — GHG Methodology & Emission Factor Library |
+| Sign in before opening the library (precondition only; not part of UC-02 activity) | S-F00-01 — Sign in (UC-10) |
+
+The Screen List identifies S-F01-03 and its purpose/entry point. The linked detailed file `screen-spec-S-F01-03.md` is not present in the current `docs/external-design/screens/` directory, so detailed control/state labels are not inferred here.
 
 ## 6. Open questions
 
 | # | Question | Blocking? | Default applied |
-| --- | --- | --- | --- |
-| 1 | [NEEDS CLARIFICATION: Should previous factor versions be automatically deprecated or kept active under specific conditions?] | No | Resolved in this version: previous version is kept active alongside the new version (`s6`). |
-| 2 | [NEEDS CLARIFICATION: Is audit log recording mandatory for brand-new methodology entries or only for updates?] | No | Resolved in this version: audit logging (`s7`) applies comprehensively to track creation and version changes. |
-| 3 | [NEEDS CLARIFICATION: Should libraries and audit logs be represented as independent lanes in the AD?] | No | Kept inside the unified EcoTrace system lane for structural consistency. |
+|---|---|---|---|
+| 1 | What lifecycle status should the previous factor/methodology version receive when a new version is created (for example, remain active or become superseded)? | Yes — for version-selection rules | The activity preserves the previous version as required by the sequence; it does not assign an unapproved status to that version. |
+| 2 | Should audit logging of new methodology/factor creation and existing-factor updates be explicitly represented in W1? SD-UC-02 includes an audit write, but FR-01-02's current W1 BE work item only states validation, storage and versioning. | Yes — for complete FR traceability | The current activity retains the audit step shown in SD-UC-02 but records the W1 traceability gap; no separate FR ID is invented. |
+| 3 | The Screen List references `screen-spec-S-F01-03.md`, but that detailed screen-spec file is absent from the current repository. Should the Lesson 8 screen specification be added? | No — for this activity's screen-ID mapping; yes for full UI handover | Use the S-F01-03 ID and purpose from the Screen List only; do not infer detailed controls or field-level error states. |
 
 ## 7. Verification log
 
@@ -110,8 +116,8 @@ Reading notes:
 | Every decision has guards on all outgoing flows, no overlap, no gap | Pass (d1, d2, d3 fully guarded) | | |
 | No action has two incoming flows (merge used instead) | Pass (no shared entry points) | | |
 | Every fork has a matching join | N/A (no forks used) | | |
-| Every system action cites an FR | Pass; FR-01-02 fully covered | | |
-| Every FR of this use case appears in the diagram | FR-01-02: yes | | |
-| Lane names match the Context Diagram and the use case actors; no Web App, API or database lanes | Pass | | |
+| Every system action cites an FR | Conditional — configuration/versioning actions trace to FR-01-02; the audit-write step is present in SD-UC-02 but is not explicit in the current W1 FR-01-02 BE work-item wording (Q2) | Assistant (source cross-check) | 2026-11-19 |
+| Every FR of this use case appears in the diagram | Pass — FR-01-02 is the direct UC-02 Must requirement in W1/W4 | Assistant (source cross-check) | 2026-11-19 |
+| Lane names match the Context Diagram and the use case actors; no Web App, API or database lanes | Pass — Sustainability & ESG is the W0/Use Case actor and is represented as the user lane | Assistant (source cross-check) | 2026-11-19 |
 | Related sequence diagram uses the same names and FR IDs; its alt fragments appear here as decisions | Pass against SD-UC-02 | | |
 | AI critic prompt run, findings resolved or logged as open questions | Done; logic flow verified | | |
