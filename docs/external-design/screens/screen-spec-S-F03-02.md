@@ -1,7 +1,7 @@
 # Screen Spec: S-F03-02 Green Steel Comparison & Recommendation Board
 
 > **Product:** EcoTrace — HPDQ Carbon Management & Reporting System  
-> **Status:** Draft — all 4 UI state frames (Loading · Calculating Scores, Success · Recommendation Saved, Partial Carbon Data, System/Data Error) are defined in the supplied design exports.  
+> **Status:** Draft — all 5 UI state frames (Default, Loading · Calculating Scores, Success · Recommendation Saved, Partial Carbon Data, System/Data Error) are defined in the supplied design exports.  
 > **Source of truth:** UC-09 sequence diagram (`SD-UC-09`), `AD-UC-09`, `FR-03-03` & `FR-03-04`, Screen List, and UI Conventions.
 
 | Field | Value |
