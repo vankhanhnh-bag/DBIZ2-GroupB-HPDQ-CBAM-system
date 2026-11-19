@@ -42,7 +42,7 @@ docs/
 | 8 | L5 | [W1_FunctionList.md](docs/function-list/W1_FunctionList.md) | The 35 functional requirements, EARS criteria and FE/BE/INT work items |
 | 9 | L5 | [W2_Costing.md](docs/function-list/W2_Costing.md), [W2_Rollup.md](docs/function-list/W2_Rollup.md), [W3_CrossReview.md](docs/function-list/W3_CrossReview.md), [W4_Prioritization.md](docs/function-list/W4_Prioritization.md), [W5_Handover.md](docs/function-list/W5_Handover.md) | Effort and cost, review findings, priorities, thresholds and handover scenarios |
 | 10 | L6 | [W6_CashFlow.md](docs/function-list/W6_CashFlow.md) | Cash flow, NPV, IRR and payback under three scope scenarios |
-| 11 | L7 | [activity-index.md](docs/activity/activity-index.md), [AD-UC-01.md](docs/activity/AD-UC-01.md), [AD-UC-02.md](docs/activity/AD-UC-02.md), [AD-UC-03.md](docs/activity/AD-UC-03.md), [AD-UC-04.md](docs/activity/AD-UC-04.md), [AD-UC-05.md](docs/activity/AD-UC-05.md), [AD-UC-06.md](docs/activity/AD-UC-06.md), [AD-UC-07.md](docs/activity/AD-UC-07.md), [AD-UC-08.md](docs/activity/AD-UC-08.md), [AD-UC-09.md](docs/activity/AD-UC-09.md), [AD-UC-10.md](docs/activity/AD-UC-10.md), [AD-UC-11.md](docs/activity/AD-UC-11.md), [AD-UC-12.md](docs/activity/AD-UC-12.md) | Activity Diagram index and all existing AD files; AD-UC-03 covers Must FR-01-03 only; AD-UC-12 covers Must FR-04-04 only; AD-UC-05 is still the teacher's LabDesk worked example |
+| 11 | L7 | [activity-index.md](docs/activity/activity-index.md), [AD-UC-01.md](docs/activity/AD-UC-01.md), [AD-UC-02.md](docs/activity/AD-UC-02.md), [AD-UC-03.md](docs/activity/AD-UC-03.md), [AD-UC-04.md](docs/activity/AD-UC-04.md), [AD-UC-06.md](docs/activity/AD-UC-06.md), [AD-UC-07.md](docs/activity/AD-UC-07.md), [AD-UC-08.md](docs/activity/AD-UC-08.md), [AD-UC-09.md](docs/activity/AD-UC-09.md), [AD-UC-10.md](docs/activity/AD-UC-10.md), [AD-UC-11.md](docs/activity/AD-UC-11.md), [AD-UC-12.md](docs/activity/AD-UC-12.md) | Activity Diagram index and existing AD files; AD-UC-03 covers Must FR-01-03 only; AD-UC-05 is not included because UC-05 / FR-01-06 is Should; AD-UC-12 covers Must FR-04-04 only |
 | 12 | L8 | [usage-flow.md](docs/external-design/usage-flow.md) | Actor-organized usage flows connected to use cases, activity diagrams and screen IDs |
 | 13 | L8 | [screen-list.md](docs/external-design/screen-list.md), [screen-transition.md](docs/external-design/screen-transition.md), [ui-conventions.md](docs/external-design/ui-conventions.md) | EcoTrace screen inventory, navigation and product-wide UI conventions |
 | 14 | L8 | [screen-spec-S-F01-02.md](docs/external-design/screens/screen-spec-S-F01-02.md) | Teacher's LabDesk Screen Spec worked example, not an EcoTrace Screen Spec |
@@ -59,8 +59,7 @@ Every file refers to the others by ID, never by retelling them:
 - `S-Fxx-nn` screens appear in the Screen List, Usage Flow and Screen Transition Diagram.
 
 Some files still show the course's LabDesk worked example rather than EcoTrace work:
-`project-brief.md`, `ai-log.md`, the sample `screen-spec-S-F01-02.md` and `AD-UC-05.md`. The EcoTrace activity for UC-05 has
-not replaced that sample. `SD-UC-05.md` remains missing; the UC-12 sequence and activity files are now present.
+`project-brief.md` and `ai-log.md`. `AD-UC-05.md` is not present; UC-05 / FR-01-06 is Should and is not included in the current Must-only activity-diagram set. `SD-UC-05.md` remains missing; the UC-12 sequence and activity files are now present.
 AD-UC-03 covers Must FR-01-03 only, and AD-UC-12 covers Must FR-04-04 only. UC-12's viewer scope remains an
 open traceability question because the Screen List describes an audit viewer but W1's Must FR specifies automatic recording.
 
