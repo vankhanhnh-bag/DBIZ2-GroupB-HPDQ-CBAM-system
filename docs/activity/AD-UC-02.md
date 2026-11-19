@@ -1,3 +1,5 @@
+# Activity Diagram: AD-UC-02 Manage GHG methodology & emission factors
+
 | Field | Value |
 | --- | --- |
 | AD ID | AD-UC-02 |
@@ -14,6 +16,8 @@
 | Business rules applied | Input parameters validation; version checking; mandatory change justification enforcement for existing factors; metadata setting (Created By/At, Updated By/At); version preservation; audit trail recording. |
 | Version / status | v1.0 |
 | Author | Quan |
+
+## 1. Diagram
 
 ```mermaid
 swimlane-beta TB
