@@ -69,11 +69,14 @@ No decision nodes are included. FR-01-03 defines a data-availability trigger rat
 
 ## 5. Screens touched
 
-No screen is included in this Must-only activity. The user-facing selection and display of batch carbon intensity belongs to FR-01-04 (Should).
+FR-01-03 (Must) is a background calculation triggered when production, energy and applicable emission-factor data are available. It does not require a user-facing screen in this activity.
 
-| Actor action | Screen ID |
+| Activity / actor action | Screen ID |
 |---|---|
-| View a selected batch's carbon intensity and contributing data sources (FR-01-04; Should, excluded) | Not included in this diagram |
+| Calculate batch carbon intensity from production, energy and applicable emission-factor data | N/A — background processing under FR-01-03; no screen action is defined |
+| Select a production batch and view its carbon intensity and contributing data sources | S-F01-04 — Batch Carbon Intensity; related user-facing screen for FR-01-04 (Should), excluded from this Must-only activity |
+
+The Screen List currently labels S-F01-04 as Must while W1/W4 classify the linked viewing function FR-01-04 as Should. The ID is recorded for traceability, but the screen is not added to the FR-01-03 Must activity.
 
 ## 6. Open questions
 
@@ -83,7 +86,8 @@ No screen is included in this Must-only activity. The user-facing selection and 
 | 2 | Must the batch carbon intensity result be stored, and which data entity/store supports FR-01-04 retrieval? | Yes — before claiming persistence or completing the Should view flow | Show only the calculated output object; no persistence action is assumed. |
 | 3 | What calculation formula, unit, process boundary and emission-factor effective-date rule apply? | Yes — for detailed calculation acceptance criteria | Use only the input categories stated in FR-01-03; do not invent a formula. |
 | 4 | What happens when production, energy or emission-factor inputs are missing or inconsistent? | No — for the stated trigger path; yes for failure-path completeness | No failure branch is modeled until a rule or FR is confirmed. |
-| 5 | Is FR-01-04 to remain Should, with a separate user-facing selection/display flow? | No — priority is already Should in W1/W4 | Exclude FR-01-04 from this Must-only diagram. |
+| 5 | The Screen List labels S-F01-04 (Batch Carbon Intensity) as Must, but W1/W4 classify FR-01-04 (View batch carbon intensity) as Should and FR-01-03 calculation is a background function. Should the screen priority/mapping be corrected, or is a separate Must-level display requirement missing? | Yes — for Screen List / W1 traceability sign-off | Keep the current diagram limited to FR-01-03 Must; record S-F01-04 as the related FR-01-04 viewing screen, not an action in this activity. |
+| 6 | The Screen List references `screen-spec-S-F01-04.md`, but that detailed file is not present in the current `docs/external-design/screens/` directory. Should the detailed screen spec be added? | No — for this background Must activity; yes for full UI handover | Use only the S-F01-04 name, actor, purpose and mapping from the Screen List. |
 
 ## 7. Verification log
 
@@ -98,6 +102,7 @@ No screen is included in this Must-only activity. The user-facing selection and 
 | Lane names follow the black-box activity convention | Pass — one EcoTrace system lane; no UI/API/database lanes | Draft | 2026-11-16 |
 | Related sequence diagram uses the same trigger, inputs, output and FR ID | Pass against SD-UC-03 | Draft | 2026-11-16 |
 | Open data-source and persistence assumptions are recorded | Pass — Sections 6 and SD-UC-03 open questions | Draft | 2026-11-16 |
+| Screen mapping cross-check | Pass — S-F01-04 is identified as the related FR-01-04 Should viewer; not part of the FR-01-03 Must calculation | Assistant (source cross-check) | 2026-11-19 |
 | Peer review / AI critic | Not yet performed | — | — |
 
 *Template and notation follow the team's existing AD-UC-02 / AD-UC-04 structure and Mermaid `swimlane-beta` convention.*
