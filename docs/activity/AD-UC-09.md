@@ -104,7 +104,7 @@ Reading notes:
 
 ## 5. Screens touched
 
-| Screen / actor action | Status |
+| Screen / actor action | Screen  |
 |---|---|
 | Customer inputs and submits comparison criteria (`S-F03-01` Green Steel Filter & Comparison Criteria) | Handled within UC-09 (`FR-03-01`, `FR-03-02`); primary entry screen for criteria filtering and validation error handling. |
 | Customer reviews weighted scores, ranked recommendations, and selects/saves the preferred option (`S-F03-02` Green Steel Comparison & Recommendation Board) | Handled within UC-09 (`FR-03-03`, `FR-03-04`); displays scoring results, Primary/Alternative flags, and persistence handling. |
