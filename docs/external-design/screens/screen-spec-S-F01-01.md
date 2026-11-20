@@ -38,8 +38,6 @@ The supplied concept mockup is a visual reference only. It is not the source for
 
 ## 3. Element inventory
 
-## 3. Element inventory
-
 | # | Element | Type | Content / data source | Required | Validation / behaviour |
 |---|---|---|---|---|---|
 | 1 | App shell | Navigation shell | EcoTrace feature navigation; current signed-in role | Yes | For standard operational users, show Overview, applicable F-01 / F-02 / F-03 destinations and Help & Support only; hide F-04 administration links. Sign-in is a shared entry screen, not a sidebar item. F-04 navigation is reserved for authorized System Admins / Auditors. Authorization remains enforced by the platform (FR-04-03). |
