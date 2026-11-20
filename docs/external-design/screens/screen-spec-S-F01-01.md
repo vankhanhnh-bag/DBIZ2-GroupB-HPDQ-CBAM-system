@@ -51,6 +51,7 @@ The supplied concept mockup is a visual reference only. It is not the source for
 | 9 | Calculation basis | Read-only calculation-basis panel | Constituent-batch carbon intensity + applicable logistics emissions; the panel explains the two input categories used by FR-01-05 | Yes | Show the two required input categories and their relationship to the shipment-level PCF result. Do not invent a mathematical formula, input value, unit or aggregation rule beyond FR-01-05. The PCF result itself is element 8. |
 | 10 | Data lineage / source systems | Read-only information panel | SAP S/4HANA → EcoTrace carbon data / traceability → Hoa Phat Logistics → PCF calculation | Recommended | Describe provenance only; do not imply an additional calculation or verification step. |
 | 11 | Missing-data notice | Warning / error banner | Missing shipment reference, batch carbon intensity or batch-to-shipment linkage identified by the UC-04 validation branch in AD-UC-04 | Conditional | Name the missing item or batch where known. Do not display a PCF result when required shipment/batch data is missing. |
+| 12 | Calculation-in-progress feedback | Inline progress / loading state | User has requested UC-04; system is retrieving required inputs and calculating | Conditional | Disable duplicate submissions while the request is active. This is a transient UI feedback state, not a new use case or persisted business status. |
 
 ## 4. States
 
