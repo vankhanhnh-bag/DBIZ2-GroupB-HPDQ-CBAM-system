@@ -10,7 +10,7 @@
 | Priority | Must |
 | Feature | F-02 CBAM Compliance & Carbon Cost Estimation |
 | Activity diagrams | AD-UC-08 (actions "Review rule settings", "Create or edit a draft", "See access denied") |
-| Mockup images | `S-F02-02 — Default.png` (default), `S-F02-02 — Default — numbered.png`, four state images (section 2) |
+| Mockup images | `img/S-F02-02 — Default.png` (default), `S-F02-02 — Default — numbered.png`, four state images (section 2) |
 | Frame width | 1440px (exported at 1×, 1440 pixels) |
 | Figma frame | [01 — Done screens](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=8-73) |
 | Status | Draft for team review |
@@ -25,7 +25,7 @@
 
 ![S-F02-02](img/S-F02-02%20%E2%80%94%20Default.png)
 
-**Numbered:** each number is the # of the element inventory in section 3. Elements 12–15 (access-denied, loading, empty and system-error messages appear only in their respective state images.)
+**Numbered:** each number is the # of the element inventory in section 3. Elements 12–15 (permission, loading, empty and system-error messages) appear only in their corresponding state images.
 
 | Default, numbered | Error, numbered |
 |---|---|
@@ -33,11 +33,11 @@
 
 | State | Image |
 |---|---|
-| Default | `img/S-F02-02%20%E2%80%94%20Default.png` |
-| Empty | `img/S-F02-02%20%E2%80%94%20Empty.png` |
-| Loading | `img/S-F02-02%20%E2%80%94%20Loading.png` |
-| Access Denied | `img/S-F02-02%20%E2%80%94%20Access%20Denied.png` |
-| System Error | `img/S-F02-02%20%E2%80%94%20System%20Error.png` |
+| Default | `img/S-F02-02 — Default.png` |
+| Empty | `img/S-F02-02 — Empty.png` |
+| Loading | `img/S-F02-02 — Loading.png` |
+| Access Denied | `img/S-F02-02 — Access Denied.png` |
+| System Error | `img/S-F02-02 — System Error.png` |
 
 All colours, fonts and corners follow the shared design conventions in
 [ui-conventions.md](../ui-conventions.md).
@@ -105,7 +105,7 @@ All colours, fonts and corners follow the shared design conventions in
 ## 7. Linked requirements
 
 | FR ID | What this screen does for it |
-| --- | --- |
+|---|---|
 | FR-02-14 | Lists active and scheduled CBAM regulatory rule sets with parameter values, effective dates and source references for authorized Compliance / Product Owner users. |
 | FR-04-03 | Checks access to protected configuration and edit navigation; prevents disclosure/actions without permission. |
 | FR-02-15 | Provides an entry to the create/edit draft form on S-F02-03, which implements draft saving. |

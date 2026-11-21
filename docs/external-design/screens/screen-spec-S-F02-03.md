@@ -10,7 +10,7 @@
 | Priority | Must |
 | Feature | F-02 CBAM Compliance & Carbon Cost Estimation |
 | Activity diagrams | AD-UC-08 (actions "Edit regulatory parameters", "Save draft", "Validate and activate") |
-| Mockup images | `S-F02-03 — Default.png` (default), `S-F02-03 — Default — numbered.png`, four state images (section 2) |
+| Mockup images | `img/S-F02-03 — Default.png` (default), `S-F02-03 — Default — numbered.png`, four state images (section 2) |
 | Frame width | 1440px (exported at 1×, 1440 pixels) |
 | Figma frame | [01 — Done screens](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=8-73) |
 | Status | Draft for team review |
@@ -25,7 +25,7 @@
 
 ![S-F02-03](img/S-F02-03%20%E2%80%94%20Default.png)
 
-**Numbered:** each number is the # of the element inventory in section 3. Elements 9–16 (validation messages (9–10), confirmations (11–12) and modal controls (13–16) appear in their corresponding images.)
+**Numbered:** each number is the # of the element inventory in section 3. Elements 9–10 appear in Validation Error, 11 in Draft Saved, 12 in Activation Success, and 13–16 in the confirmation modal.
 
 | Default, numbered | Error, numbered |
 |---|---|
@@ -33,13 +33,13 @@
 
 | State | Image |
 |---|---|
-| Default | `img/S-F02-03%20%E2%80%94%20Default.png` |
-| Validation Error | `img/S-F02-03%20%E2%80%94%20Validation%20Error.png` |
-| Draft Saved | `img/S-F02-03%20%E2%80%94%20Draft%20Saved.png` |
-| Activation Success | `img/S-F02-03%20%E2%80%94%20Activation%20Success.png` |
-| Confirmation modal (M-F02-03) | `img/M-F02-03%20%E2%80%94%20Confirm%20Rule%20Set%20Activation.png` |
+| Default | `img/S-F02-03 — Default.png` |
+| Validation Error | `img/S-F02-03 — Validation Error.png` |
+| Draft Saved | `img/S-F02-03 — Draft Saved.png` |
+| Activation Success | `img/S-F02-03 — Activation Success.png` |
+| Confirmation modal (M-F02-03) | `img/M-F02-03 — Confirm Rule Set Activation.png` |
 
-The numbered modal image is `img/M-F02-03%20%E2%80%94%20Confirm%20Rule%20Set%20Activation%20%E2%80%94%20numbered.png`; M-F02-03 is an overlay on this screen, not a separate screen.
+The numbered modal image is `img/M-F02-03 — Confirm Rule Set Activation — numbered.png`; M-F02-03 is an overlay on this screen, not a separate screen.
 
 All colours, fonts and corners follow the shared design conventions in
 [ui-conventions.md](../ui-conventions.md).
@@ -119,7 +119,7 @@ The modal is **not** a third screen and has no separate Screen Spec: it is fully
 ## 7. Linked requirements
 
 | FR ID | What this screen does for it |
-| --- | --- |
+|---|---|
 | FR-02-15 | Create/edit form gathers configured regulatory parameter values and source references and saves them as a draft version. |
 | FR-02-16 | Blocks activation for missing required values, invalid ranges or overlapping effective periods and displays reasons beside the draft. |
 | FR-02-17 | Confirmation and authorization precede versioned activation/scheduling with effective date; prior versions are retained and applicable future estimates use the correct version. |
