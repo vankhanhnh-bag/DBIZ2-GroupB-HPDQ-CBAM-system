@@ -28,18 +28,16 @@
 **The user leaves this screen when:** they click **Edit criteria** to return to `S-F03-01`, click **View carbon profile** to inspect underlying product PCF traceability (`F-01`), or navigate to another module via the EcoTrace workspace sidebar.
 
 ## 2. Mockup
-
-![S-F03-02](img/S-F03-02.png)
-
-The supplied design exports follow the agreed EcoTrace visual direction: dark navy left sidebar (`EcoTrace · HPDQ`), white main workspace, breadcrumb header (`Green Steel / Comparison Board`), active criteria summary strip with **Edit criteria** action, two-column upper section (left: **Recommended / Selected Option** hero card; right: **Score breakdown** weight card), and full-width **Product comparison** ranked table below.
-
-- **Supplied UI state frames:**
-  1. `S-F03-02 — Loading · Calculating Scores.pdf`
-  2. `S-F03-02 — Partial Carbon Data.pdf`
-  3. `S-F03-02 — Success · Recommendation Saved.pdf`
-  4. `S-F03-02 — System/Data Error.pdf`
-
-Illustrative product names, scores (`92`, `84`, `82`, `61*`), and emission/cost figures in the mockups are design placeholders and must be populated dynamically from backend calculation outputs.
+Default numbered
+<img width="1453" height="1037" alt="Default" src="https://github.com/user-attachments/assets/31590d6c-5632-48c6-a19f-262771c44488" />
+Calculation scores numbered
+<img width="1453" height="1037" alt="Calculation" src="https://github.com/user-attachments/assets/c6a3fac4-2497-47ec-a9be-589103b91566" />
+Recommendation Saved numbered
+<img width="1453" height="1037" alt="Recommendation Saved" src="https://github.com/user-attachments/assets/64cded8c-0e2c-4747-a35d-bb29b87aab00" />
+Partical Carbon Data numbered
+<img width="1453" height="1037" alt="Partical Carbon Data" src="https://github.com/user-attachments/assets/164a55cb-4a7d-453b-ab7f-69712f96c8d7" />
+Data Error numbered
+<img width="1453" height="1037" alt="SystemData Error" src="https://github.com/user-attachments/assets/463a1782-132e-4c43-859c-d55fbb25451b" />
 
 ## 3. Element inventory
 
