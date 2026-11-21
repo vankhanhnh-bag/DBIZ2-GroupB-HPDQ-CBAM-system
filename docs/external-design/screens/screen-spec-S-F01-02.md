@@ -33,8 +33,6 @@
 
 <img width="1440" height="1024" alt="image" src="https://github.com/user-attachments/assets/96a5f59f-3ef2-4609-951b-c1d2615ec9d4" />
 
-Numbered: each number is the # of the element inventory in section 3. Element 8 (Error banner) appears only in the error state, so it is numbered on the error image.
-
 **Default, numbered**
 
 <img width="1440" height="1024" alt="S-F01-02 — Default - numbered" src="https://github.com/user-attachments/assets/51486efc-027c-4e97-a8fa-e9d6545699f7" />
