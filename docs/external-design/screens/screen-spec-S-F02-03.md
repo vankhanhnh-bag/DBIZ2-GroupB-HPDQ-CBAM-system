@@ -23,23 +23,23 @@
 
 ## 2. Mockup
 
-![S-F02-03](img/S-F02-03%20%E2%80%94%20Default.png)
+![S-F02-03 — Default](img/S-F02-03%20%E2%80%94%20Default.png)
 
-**Numbered:** each number is the # of the element inventory in section 3. Elements 9–10 appear in Validation Error, 11 in Draft Saved, 12 in Activation Success, and 13–16 in the confirmation modal.
+**Numbered:** each number refers to the matching # in the element inventory in section 3. All five numbered UI states/surfaces are shown directly below. Elements 9–10 appear in Validation Error, 11 in Draft Saved, 12 in Activation Success, and 13–16 in the confirmation modal.
 
-| Default, numbered | Error, numbered |
+| Default — numbered | Validation Error — numbered |
 |---|---|
-| ![S-F02-03 numbered](img/S-F02-03%20%E2%80%94%20Default%20%E2%80%94%20numbered.png) | ![S-F02-03 error numbered](img/S-F02-03%20%E2%80%94%20Validation%20Error%20%E2%80%94%20numbered.png) |
+| ![S-F02-03 — Default numbered](img/S-F02-03%20%E2%80%94%20Default%20%E2%80%94%20numbered.png) | ![S-F02-03 — Validation Error numbered](img/S-F02-03%20%E2%80%94%20Validation%20Error%20%E2%80%94%20numbered.png) |
 
-| State | Image |
+| Draft Saved — numbered | Activation Success — numbered |
 |---|---|
-| Default | `img/S-F02-03 — Default.png` |
-| Validation Error | `img/S-F02-03 — Validation Error.png` |
-| Draft Saved | `img/S-F02-03 — Draft Saved.png` |
-| Activation Success | `img/S-F02-03 — Activation Success.png` |
-| Confirmation modal (M-F02-03) | `img/M-F02-03 — Confirm Rule Set Activation.png` |
+| ![S-F02-03 — Draft Saved numbered](img/S-F02-03%20%E2%80%94%20Draft%20Saved%20%E2%80%94%20numbered.png) | ![S-F02-03 — Activation Success numbered](img/S-F02-03%20%E2%80%94%20Activation%20Success%20%E2%80%94%20numbered.png) |
 
-The numbered modal image is `img/M-F02-03 — Confirm Rule Set Activation — numbered.png`; M-F02-03 is an overlay on this screen, not a separate screen.
+| Confirm Activation (M-F02-03) — numbered | |
+|---|---|
+| ![M-F02-03 — Confirm Rule Set Activation numbered](img/M-F02-03%20%E2%80%94%20Confirm%20Rule%20Set%20Activation%20%E2%80%94%20numbered.png) | |
+
+M-F02-03 is a confirmation overlay on S-F02-03, not a separate Screen Spec.
 
 All colours, fonts and corners follow the shared design conventions in
 [ui-conventions.md](../ui-conventions.md).

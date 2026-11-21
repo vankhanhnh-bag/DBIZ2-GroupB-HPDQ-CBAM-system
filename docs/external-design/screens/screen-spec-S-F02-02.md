@@ -23,21 +23,21 @@
 
 ## 2. Mockup
 
-![S-F02-02](img/S-F02-02%20%E2%80%94%20Default.png)
+![S-F02-02 — Default](img/S-F02-02%20%E2%80%94%20Default.png)
 
-**Numbered:** each number is the # of the element inventory in section 3. Elements 12–15 (permission, loading, empty and system-error messages) appear only in their corresponding state images.
+**Numbered:** each number refers to the matching # in the element inventory in section 3. All five numbered UI states are shown directly below. Elements 12–15 (permission, loading, empty and system-error feedback) appear only in their respective states.
 
-| Default, numbered | Error, numbered |
+| Default — numbered | Access Denied — numbered |
 |---|---|
-| ![S-F02-02 numbered](img/S-F02-02%20%E2%80%94%20Default%20%E2%80%94%20numbered.png) | ![S-F02-02 error numbered](img/S-F02-02%20%E2%80%94%20Access%20Denied%20%E2%80%94%20numbered.png) |
+| ![S-F02-02 — Default numbered](img/S-F02-02%20%E2%80%94%20Default%20%E2%80%94%20numbered.png) | ![S-F02-02 — Access Denied numbered](img/S-F02-02%20%E2%80%94%20Access%20Denied%20%E2%80%94%20numbered.png) |
 
-| State | Image |
+| Loading — numbered | Empty — numbered |
 |---|---|
-| Default | `img/S-F02-02 — Default.png` |
-| Empty | `img/S-F02-02 — Empty.png` |
-| Loading | `img/S-F02-02 — Loading.png` |
-| Access Denied | `img/S-F02-02 — Access Denied.png` |
-| System Error | `img/S-F02-02 — System Error.png` |
+| ![S-F02-02 — Loading numbered](img/S-F02-02%20%E2%80%94%20Loading%20%E2%80%94%20numbered.png) | ![S-F02-02 — Empty numbered](img/S-F02-02%20%E2%80%94%20Empty%20%E2%80%94%20numbered.png) |
+
+| System Error — numbered | |
+|---|---|
+| ![S-F02-02 — System Error numbered](img/S-F02-02%20%E2%80%94%20System%20Error%20%E2%80%94%20numbered.png) | |
 
 All colours, fonts and corners follow the shared design conventions in
 [ui-conventions.md](../ui-conventions.md).
