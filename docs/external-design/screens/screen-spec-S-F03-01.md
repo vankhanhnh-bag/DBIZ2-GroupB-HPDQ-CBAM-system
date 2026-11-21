@@ -30,29 +30,21 @@
 ## 2. Mockup
 
 
-
+Default — numbered
 <img width="1453" height="1037" alt="S-F03-01 — Default — numbered" src="https://github.com/user-attachments/assets/5d8a0681-642f-4f95-8b9d-8884fc0569bf" />
+Validation Error — numbered
 <img width="1453" height="1037" alt="S-F03-01 — Validation Error — numbered" src="https://github.com/user-attachments/assets/d3a2dae6-be69-4378-8625-509218bb1b79" />
+No Matching Products — numbered
 <img width="1453" height="1037" alt="S-F03-01 — No Matching Products — numbered" src="https://github.com/user-attachments/assets/95675bbb-925d-4f96-8ece-875b2f1df107" />
+Loading · Comparing — numbered
 <img width="1453" height="1037" alt="S-F03-01 — Loading · Comparing — numbered" src="https://github.com/user-attachments/assets/0ac44dde-4ec0-4080-b24e-d2ee63ec1a66" />
+Dropdown Open — numbered
 <img width="1453" height="1037" alt="S-F03-01 — Dropdown Open — numbered" src="https://github.com/user-attachments/assets/2765cfe9-13a8-48cc-8c50-b1f652990a8f" />
+Data Error — numbered
 <img width="1453" height="1037" alt="S-F03-01 — Data Error — numbered" src="https://github.com/user-attachments/assets/279da112-2362-40e2-90d4-e739c562fd3f" />
+Criteria Selected — numbered
 <img width="1453" height="1037" alt="S-F03-01 — Criteria Selected — numbered" src="https://github.com/user-attachments/assets/578df319-0bad-443c-bba1-06b428f036c1" />
 
-
-
-The supplied design exports follow the agreed EcoTrace visual direction: dark navy left workspace sidebar (`EcoTrace · HPDQ`), white main canvas, breadcrumb header (`Green Steel / Product Comparison`), role badge (`Customers / Procurement`), two-column card layout (left: **Comparison criteria** form; right: **How the comparison works** & **Comparison flow** stepper), and bottom **Design preview** banner.
-
-- **Supplied UI state frames:**
-  1. `S-F03-01 — Default.pdf`
-  2. `S-F03-01 — Dropdown Open.pdf`
-  3. `S-F03-01 — Criteria Selected.pdf`
-  4. `S-F03-01 — Validation Error.pdf`
-  5. `S-F03-01 — Loading · Comparing.pdf`
-  6. `S-F03-01 — No Matching Products.pdf`
-  7. `S-F03-01 — System/Data Error.pdf`
-
-Illustrative dropdown values and preview notices in the mockups are visual references only and must not be hardcoded as live production data.
 
 ## 3. Element inventory
 
