@@ -15,7 +15,10 @@
 | Activity diagram | AD-UC-08 — check protected access, review current configuration, optionally create/edit a rule-set draft and request activation |
 | Sequence diagram | SD-UC-08 — check view permission, retrieve active and scheduled configurations, and enforce edit/activation authorization on subsequent actions |
 | Linked requirements | FR-02-14 (Must); shared FR-04-03 (Must). FR-02-15–17 are handled by S-F02-03 after navigation. |
-| Mockup / Figma | [EcoTrace — 01 Done screens](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=8-73) — frames named S-F02-02; exact per-frame node links pending verification |
+| Figma page | [EcoTrace — 01 Done screens](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=8-73) (individual frame deep links not yet verified) |
+| Mockup images | `img/S-F02-02%20%E2%80%94%20Default.png`, `img/S-F02-02%20%E2%80%94%20Default%20%E2%80%94%20numbered.png`; state image table in section 2 |
+| Frame size | 1440 × 1024 px (PNG at 1×) |
+| Status | Draft for team review; numbered images added; Figma verification pending |
 | Data shown | Active and scheduled CBAM regulatory rule sets, parameter values, effective dates and source references, as returned by the CBAM service |
 | Important limitation | The canonical rule-set identifiers, parameter schema, status enum, sorting, search/filter controls and granular RBAC permission keys are not defined in W1. Do not invent them as confirmed requirements. |
 
@@ -31,17 +34,23 @@
 
 ## 2. Mockup
 
-Use editable EcoTrace frames consistent with the F-01 examples: **1440 × 1024** desktop app shell, Hòa Phát navy sidebar, shared top bar, breadcrumbs, white card/table surfaces, action blue and restrained green accents. Keep the existing product branding; do not add a designer's name. The Figma page above is a page-level reference, not a verified deep link to each state.
+![S-F02-02 CBAM Regulatory Settings — Default](img/S-F02-02%20%E2%80%94%20Default.png)
 
-| Frame | State / surface |
+**Numbered:** each mint circle refers to the matching **#** in the element inventory in section 3, as in the teacher's worked example. Shared application-shell elements may carry the same number in the sidebar and top bar. Feedback elements **12–15** appear only in their corresponding states, not all on Default.
+
+| Default, numbered | Access Denied, numbered |
 |---|---|
-| S-F02-02 — Default | Authorized user reviews active/scheduled rule sets, parameter values, effective dates and references; create/edit navigation is available when permitted |
-| S-F02-02 — Loading | Retrieval of protected regulatory settings in progress; no stale configuration is represented as a confirmed current value |
-| S-F02-02 — Empty | The authorized query has no configuration records to display; distinguish this from access denial or an unavailable service |
-| S-F02-02 — Access Denied | Requested configuration is not displayed because view permission was denied |
-| S-F02-02 — System Error | Configuration retrieval failed; no successful load is implied |
+| ![S-F02-02 Default numbered](img/S-F02-02%20%E2%80%94%20Default%20%E2%80%94%20numbered.png) | ![S-F02-02 Access Denied numbered](img/S-F02-02%20%E2%80%94%20Access%20Denied%20%E2%80%94%20numbered.png) |
 
-The last three presentations are UI feedback states, **not new persisted rule-set status values**. The sources expressly require denied access; Loading, Empty and System Error are design-level contingencies. Their exact messages and recovery behavior require confirmation. Use neutral placeholders for identifiers/dates/parameter values, never invented CBAM thresholds or actual legal requirements.
+| State | Mockup image | Numbered image |
+|---|---|---|
+| Default | [Default PNG](img/S-F02-02%20%E2%80%94%20Default.png) | [Numbered PNG](img/S-F02-02%20%E2%80%94%20Default%20%E2%80%94%20numbered.png) |
+| Loading | [Loading PNG](img/S-F02-02%20%E2%80%94%20Loading.png) | [Numbered PNG](img/S-F02-02%20%E2%80%94%20Loading%20%E2%80%94%20numbered.png) |
+| Empty | [Empty PNG](img/S-F02-02%20%E2%80%94%20Empty.png) | [Numbered PNG](img/S-F02-02%20%E2%80%94%20Empty%20%E2%80%94%20numbered.png) |
+| Access Denied | [Access Denied PNG](img/S-F02-02%20%E2%80%94%20Access%20Denied.png) | [Numbered PNG](img/S-F02-02%20%E2%80%94%20Access%20Denied%20%E2%80%94%20numbered.png) |
+| System Error | [System Error PNG](img/S-F02-02%20%E2%80%94%20System%20Error.png) | [Numbered PNG](img/S-F02-02%20%E2%80%94%20System%20Error%20%E2%80%94%20numbered.png) |
+
+The five PNG states use a **1440 × 1024 px** desktop mockup and the shared EcoTrace UI conventions. Numbered copies are annotated versions of the existing UI Kit PNG renders; they are **not yet verified exports of the current editable Figma frames**. Values, version labels, counts and source examples are illustrative, not live CBAM configuration. Loading, Empty, Access Denied and System Error are presentation states, not new persisted rule-set statuses.
 
 ## 3. Element inventory
 
@@ -49,20 +58,20 @@ The last three presentations are UI feedback states, **not new persisted rule-se
 |---|---|---|---|---|---|
 | 1 | App shell (sidebar + top bar) | Global layout | EcoTrace navigation and authenticated Compliance / Product Owner context | Yes | Reuse F-01 shell and role-appropriate navigation; F-04 administrative tools are not automatically shown to this actor. |
 | 2 | Breadcrumb and page title | Header | CBAM & Carbon Cost / Regulatory Settings | Yes | Show where the user is in the feature. |
-| 3 | Active / Scheduled configurations heading | Section heading | Current regulatory rule-set configurations | Yes, when authorized | Label the returned dataset without assuming a canonical status enum beyond W1's wording. |
-| 4 | Regulatory configurations table | Data table | Active and scheduled rule-set records from CBAM service / EcoTrace database (FR-02-14) | Yes, when records exist | Display only retrieved records; no hardcoded regulations or regulatory values. |
+| 3 | Configuration status summary cards | KPI cards / section heading | Source-defined active and scheduled configuration counts; the mockup also illustrates a Draft count | Yes, when authorized | Counts and Draft card in the mockup are illustrative UI additions; confirm they are in scope and loaded from the data service, not hardcoded. |
+| 4 | Regulatory Rule Sets section, filter tabs and data table | Section header / filter tabs / data table | Active/scheduled rule-set rows from CBAM service (FR-02-14); All / Active / Scheduled / Drafts tabs shown in the mockup | Yes, when records exist | Maintain readable headers and source data. Filter options/draft scope are a design proposal until approved; do not infer unsupported sorting or queries. |
 | 5 | Rule-set reference / version | Read-only data cell | Identifier/version supplied by the service, if available | Conditional | Preserve the source identifier; exact identifier fields are not specified in W1. |
-| 6 | Regulatory parameters and values | Read-only detail rows / table cells | Parameter names, values and units from each regulatory configuration (FR-02-14) | Yes, when available | Show values and their returned units; no invented field set or validation ranges. |
+| 6 | Current configuration / governance overview | Read-only panels / rows | Regulatory parameter groups and configured methods/values, units, references, plus traceability/governance explanations (FR-02-14; FR-02-17 / FR-04-04 context) | Yes, when available | Display only returned parameter data; explanatory governance content is not a substitute for actual audit records or an approved history viewer. |
 | 7 | Effective date | Read-only date cell | Effective date associated with the returned rule set (FR-02-14) | Yes, when returned | Format dd/MM/yyyy in the UI; do not calculate an unapproved activation schedule. |
 | 8 | Source reference | Read-only link/text | Official/regulatory source reference stored for the rule set (FR-02-14) | Yes, when returned | Keep source provenance; only make clickable when a valid URL is present. |
 | 9 | Status badge | Status label | Source-defined active or scheduled status | Yes, when returned | Show textual label plus color/icon; do not invent a full business-status taxonomy. |
-| 10 | Draft-entry action | Contextual Edit link/button | Existing draft available for maintenance, as described in Screen List | Conditional | Route to S-F02-03; do not permit an edit without appropriate authorization. |
+| 10 | Rule-set row actions (View details / Edit draft) | Contextual links/buttons | Read-only View details for existing configurations; Edit draft for available editable draft (Screen List / FR-02-15 entry) | Conditional | View does not mutate. Edit navigates to S-F02-03 only after appropriate authorization; exact details presentation is unconfirmed. |
 | 11 | Create New Rule Set | Primary button | User intent to create a draft (FR-02-15, on next screen) | Conditional | Navigate to S-F02-03; edit access must be enforced. |
 | 12 | Permission-denied feedback | Banner / restricted view | FR-04-03 result | Conditional | Explain lack of access without rendering sensitive parameter values. |
 | 13 | Loading indicator | Spinner / skeleton | In-progress regulatory-config query | Conditional | Keep labels understandable; avoid claiming the results are current before response. |
 | 14 | Empty-state message | Informational panel | Empty result of authorized configuration query | Conditional | State that no records were returned; next action depends on permitted maintenance workflow. |
 | 15 | Retrieval-error message | Error banner | Error returned by the regulatory service | Conditional | Do not claim configuration is empty or unchanged; retry behavior is to be confirmed. |
-| 16 | Return to workspace | Navigation | EcoTrace workspace | Yes | Workspace is outside the Screen List and is not a separate S-F02 screen. |
+| 16 | Return to workspace | Sidebar navigation / button | Home page and the Access Denied state's Return to Workspace action | Yes | Return to the appropriate workspace without revealing protected settings. |
 
 ## 4. States
 
@@ -138,17 +147,18 @@ FR-04-04 (audit logging) applies to **writes performed from S-F02-03**, not a re
 | 6 | Should users search, filter or sort configurations, and by which fields? | No — not specified in W1 | Open |
 | 7 | What are the approved empty, retrieval-failure and retry behaviors? May cached configuration be displayed, and under which disclaimer? | No — UI fallback policy | Open |
 
+| 8 | Are the mockup's KPI counts, Draft status card, filter tabs and View details affordance approved for v1, and what data fields back them? | No — UI details | Open; not explicitly required by FR-02-14. |
 ---
 
 ## Completion checklist
 
-- [ ] A separately cropped S-F02-02 mockup image is linked or committed under screens/img, per team handover convention.
-- [x] Screen ID, actor, priority, UC-08 and FR-02-14 match the Screen List and W1.
-- [x] The element inventory identifies each required displayed data group and its source.
-- [x] Authorized view, edit-navigation, denied access and loading/empty/error presentations are documented without inventing business states.
-- [x] Navigation to S-F02-03 and return to the workspace match Screen Transition §5.
-- [x] Shared RBAC is applied to protected access and edit action, without inventing permission keys.
-- [x] English/UI format/accessibility guidance follows the existing UI Conventions.
-- [ ] Exact Figma frame node links and visual consistency with F-01 have been peer-verified.
-- [ ] Open questions 1–4 are resolved with the team/approved data contract.
-- [ ] Peer review is completed and this draft is marked reviewed.
+- [x] A separate cropped 1440 × 1024 PNG exists for S-F02-02 Default and is embedded above.
+- [x] A numbered Default PNG exists, and mint numbers correspond to the # column of the element inventory.
+- [x] All five UI state PNGs (Default, Loading, Empty, Access Denied, System Error) and their numbered counterparts are linked in section 2.
+- [x] The inventory covers the primary visible page groups, rule-set filters, status summary, row actions, configuration detail and conditional feedback.
+- [x] The protected data source and relevant validations/permission checks are documented without inventing regulator-approved values or RBAC keys.
+- [x] Navigation to S-F02-03 and to workspace uses Screen IDs consistent with the Screen List and Screen Transition.
+- [x] Linked FRs exist in W1 and relevant AD-UC-08 view/maintain actions are described.
+- [ ] Numbered PNGs and styling have been peer-compared with the actual latest Figma native frames (these PNGs originate from the earlier UI Kit).
+- [ ] The illustrated KPI/filter/View details behavior and open questions 1–4, 8 have been confirmed by the team.
+- [ ] Peer review completed; mark Status as Reviewed only after sign-off.

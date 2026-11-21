@@ -15,7 +15,10 @@
 | Activity diagram | AD-UC-08 — create/edit a draft, save and log changes, request activation, validate, version and log activation |
 | Sequence diagram | SD-UC-08 — authorize edit/activate requests, persist draft, validate effective periods, activate or schedule a version and append immutable audit records |
 | Linked requirements | FR-02-15, FR-02-16, FR-02-17 (all Must); shared FR-04-03 and FR-04-04 (Must) |
-| Mockup / Figma | [EcoTrace — 01 Done screens](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=8-73) — S-F02-03 state frames and M-F02-03 overlay; exact frame node links pending verification |
+| Figma page | [EcoTrace — 01 Done screens](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=8-73) (individual frame deep links not yet verified) |
+| Mockup images | `img/S-F02-03%20%E2%80%94%20Default.png`, `img/S-F02-03%20%E2%80%94%20Default%20%E2%80%94%20numbered.png`; state image table in section 2 |
+| Frame size | 1440 × 1024 px (PNG at 1×) |
+| Status | Draft for team review; numbered images added; Figma verification pending |
 | User inputs | Configured regulatory parameter values, source references; effective date for an activation request |
 | Important limitation | Required parameter names, allowed values/ranges, official regulatory sources, conflict-resolution policy, edit/activation RBAC keys and the precise schedule trigger are unspecified. Keep them as open questions, not fabricated requirements. |
 
@@ -31,17 +34,29 @@
 
 ## 2. Mockup
 
-Match the **same editable EcoTrace shell and F-01 styling**: Hòa Phát navy sidebar, top application bar, breadcrumbs, white form cards, 8 px spacing rhythm and **1440 × 1024** desktop reference. Keep the existing branding and do not add author/designer names. Do not flatten the UI into one image.
+![S-F02-03 CBAM Regulatory Rule Set Editor — Default](img/S-F02-03%20%E2%80%94%20Default.png)
 
-| Frame | State / surface |
+**Numbered:** each mint circle matches the **#** column in the section 3 element inventory. The validation callouts **9–10** appear on the Validation Error image; **11** appears on Draft Saved and **12** on Activation Success. The confirmation dialog uses **13–16** from this same inventory, not its own screen-number sequence.
+
+| Default, numbered | Validation Error, numbered |
 |---|---|
-| S-F02-03 — Default | New/edit draft form with parameter rows, source references, Save Draft and an activation entry action |
-| S-F02-03 — Validation Error | Activation blocked; missing required values, invalid ranges or overlapping effective periods explained beside affected fields/section |
-| S-F02-03 — Draft Saved | Draft was persisted and audit event recorded; it is not yet active |
-| S-F02-03 — Activation Success | Successful activation or effective-date scheduling feedback; prior versions preserved |
-| M-F02-03 — Confirm Rule Set Activation | Actual centered modal **over** S-F02-03, with dimmed editor background and Cancel / Confirm Activation; not a separate Screen ID |
+| ![S-F02-03 Default numbered](img/S-F02-03%20%E2%80%94%20Default%20%E2%80%94%20numbered.png) | ![S-F02-03 Validation Error numbered](img/S-F02-03%20%E2%80%94%20Validation%20Error%20%E2%80%94%20numbered.png) |
 
-The default screen should distinguish editable draft parameters from read-only version/history metadata. Any example dates, version IDs, units or parameter values must be marked as placeholders; do not portray invented regulatory thresholds as real rules. M-F02-03 is a presentation overlay. Its confirmation wording should mention impact on **future applicable** CBAM estimates, not retroactive updates to completed estimates.
+**Confirmation overlay (M-F02-03):** this is a modal over S-F02-03, not an independent screen. Number **13** identifies the dialog, **14** the rule-set summary, **15** Cancel and **16** Confirm Activation.
+
+| Confirm Activation | Confirm Activation, numbered |
+|---|---|
+| ![M-F02-03 Confirm Rule Set Activation](img/M-F02-03%20%E2%80%94%20Confirm%20Rule%20Set%20Activation.png) | ![M-F02-03 numbered](img/M-F02-03%20%E2%80%94%20Confirm%20Rule%20Set%20Activation%20%E2%80%94%20numbered.png) |
+
+| State / surface | Mockup image | Numbered image |
+|---|---|---|
+| Default | [Default PNG](img/S-F02-03%20%E2%80%94%20Default.png) | [Numbered PNG](img/S-F02-03%20%E2%80%94%20Default%20%E2%80%94%20numbered.png) |
+| Validation Error | [Validation Error PNG](img/S-F02-03%20%E2%80%94%20Validation%20Error.png) | [Numbered PNG](img/S-F02-03%20%E2%80%94%20Validation%20Error%20%E2%80%94%20numbered.png) |
+| Draft Saved | [Draft Saved PNG](img/S-F02-03%20%E2%80%94%20Draft%20Saved.png) | [Numbered PNG](img/S-F02-03%20%E2%80%94%20Draft%20Saved%20%E2%80%94%20numbered.png) |
+| Activation Success | [Activation Success PNG](img/S-F02-03%20%E2%80%94%20Activation%20Success.png) | [Numbered PNG](img/S-F02-03%20%E2%80%94%20Activation%20Success%20%E2%80%94%20numbered.png) |
+| M-F02-03 Confirm Activation | [Modal PNG](img/M-F02-03%20%E2%80%94%20Confirm%20Rule%20Set%20Activation.png) | [Numbered PNG](img/M-F02-03%20%E2%80%94%20Confirm%20Rule%20Set%20Activation%20%E2%80%94%20numbered.png) |
+
+These are **1440 × 1024 px** mockups using the shared EcoTrace style. Numbered copies annotate the earlier UI Kit PNG renders and **have not been verified against the latest editable Figma page**. Example rules, source URLs, versions and dates are placeholders; no values are approved regulatory thresholds. Element **17** (action-specific access feedback) is specified but **has no separate PNG state**; do not falsely mark it as pictured. The Validation Checklist and Review Activation affordance are illustrated in the mockup, but their exact sequencing remains an open design question.
 
 ## 3. Element inventory
 
@@ -49,13 +64,13 @@ The default screen should distinguish editable draft parameters from read-only v
 |---|---|---|---|---|---|
 | 1 | App shell (sidebar + top bar) | Global layout | EcoTrace navigation, actor context and breadcrumbs | Yes | Reuse shared F-01 shell and role-appropriate F-02 navigation. |
 | 2 | Page title and mode | Header | Regulatory Rule Set Editor; New / Edit Draft as appropriate | Yes | Distinguish create vs edit without implying changes are already saved. |
-| 3 | Rule-set/version reference | Read-only label | Service-generated identifier and version context, where available | Conditional | Preserve canonical IDs and historical references; no invented version numbers. |
-| 4 | Regulatory parameter editor | Text input / Select / field rows | Parameter values and units provided by the approved regulatory schema (FR-02-15) | Yes | Show only schema-defined fields. Mandatory rules/ranges are validated by service; exact list is unconfirmed. |
+| 3 | Rule-set information, draft context and version reference | Form section / read-only status | Rule set name, version reference, configuration status and draft-only warning; canonical identifiers supplied by service when available | Yes | Do not treat example Draft 02 labels or the warning as verified source data. Active configurations are not silently edited in place. |
+| 4 | Regulatory parameter editor | Field group / data table / reference links | Schema-defined parameter groups, configured methods/values and attached source references (FR-02-15) | Yes | Backend validates mandatory/range rules before activation; exact schema, units and allowed ranges remain open. |
 | 5 | Source references | Text input / reference rows | Regulatory/source citations associated with configured parameters (FR-02-15) | Yes | Persist references as part of draft; exact required format and URL validation are open. |
 | 6 | Effective date | Date picker / input | Requested effective date for activation (FR-02-17) | Yes, for activation | Must not conflict with existing effective periods; do not invent timezone/scheduling rules. |
 | 7 | Save Draft | Primary/secondary action | New or edited draft values and references | Yes | Save draft version (FR-02-15) after edit authorization; record change (FR-04-04). Draft save does not mean activation. |
-| 8 | Validate / Activate request | Action button | User request to activate a draft | Conditional | Enter activation flow; activation permission and validation are required (FR-02-16–17). |
-| 9 | Validation error summary | Banner | Missing mandatory values, invalid ranges, conflicting effective periods returned by service | Conditional | Block activation and provide clear correction instructions; no generic success. |
+| 8 | Validate & Activate request / validation checklist | Action button / checklist panel | Primary Validate & Activate, pre-activation checks and illustrated Review Activation button (FR-02-16–17) | Conditional | Activation requires authorization and validation. The precise ordering between Review Activation, modal confirmation and service checks needs team confirmation. |
+| 9 | Validation error summary | Error banner / checklist feedback | Missing mandatory values, invalid ranges and conflicting effective periods returned by service (FR-02-16) | Conditional | Block activation; error banner/checklist show reasons without implying a successful change. |
 | 10 | Field-level errors | Inline feedback | Parameter, source or effective-date validation reasons from service | Conditional | Attach error text to affected control; preserve user draft context where allowed. |
 | 11 | Draft saved confirmation | Toast / banner | Confirmation of persisted draft/version (FR-02-15) | Conditional | Clearly say Saved as draft; do not show Active without authorization and activation. |
 | 12 | Activation/scheduling confirmation | Toast / banner | Returned activation result with effective date/status (FR-02-17) | Conditional | Distinguish successfully applied now from future-effective/scheduled outcome if supported by service. |
@@ -64,7 +79,7 @@ The default screen should distinguish editable draft parameters from read-only v
 | 15 | Modal Cancel | Secondary button | Dismiss confirmation | Conditional | Close modal with no activation request; leave saved draft unaffected. |
 | 16 | Modal Confirm Activation | Primary button | Confirm activation request | Conditional | Submit once; authorize activation, validate and then activate/version only if valid. |
 | 17 | Action-specific access feedback | Banner | RBAC edit/activate check results (FR-04-03) | Conditional | Prevent unauthorized write/activation; protect draft and configuration data. |
-| 18 | Previous-version traceability | Read-only note/link | Retained earlier rule-set versions (FR-02-17) | Conditional | Preserve prior versions; no invented history viewer or separate screen. |
+| 18 | Version Impact and prior-version traceability | Read-only information panel | Applicable effective date, future estimate use and prior-version preservation (FR-02-17) | Conditional | The informational panel does not itself implement an unapproved version-history viewer. |
 | 19 | Back to Regulatory Settings | Secondary button / breadcrumb | S-F02-02 navigation | Yes | Return without asserting an unsaved change was committed; exact unsaved-changes prompt not specified. |
 
 ## 4. States
@@ -153,18 +168,19 @@ The modal is **not** a third screen and has no separate Screen Spec: it is fully
 | 8 | Should prior versions be shown in the editor or only retained in the data service? How can users inspect historical sources? | No — history presentation | Open |
 | 9 | Are rule-set identifiers/versions generated on draft save, and what is the approved display format? | No — display contract | Open |
 
+| 10 | Should Review Activation be a distinct step from the primary Validate & Activate button, and what is the approved trigger order for M-F02-03 and the validation checklist? | Yes — navigation/interaction agreement | Open; the current mockup illustrates both controls. |
 ---
 
 ## Completion checklist
 
-- [ ] A separate cropped S-F02-03 mockup image is linked or committed under screens/img.
-- [x] Screen ID, actor, priority, UC-08 and three Must FRs match W1 and Screen List.
-- [x] Save Draft and activation are distinct, with source references and effective date included.
-- [x] Required input groups identify their source and unknown validation rules are recorded as open questions.
-- [x] Validation Error, Draft Saved, Activation Success and the M-F02-03 overlay are documented.
-- [x] M-F02-03 is a real confirmation dialog over the Editor, not a separate screen or a renamed full-page Editor.
-- [x] Protected edit/activation and completed-change audit behavior are traced to shared FR-04-03 and FR-04-04.
-- [x] Navigation and screen names follow Screen Transition §5 and the shared UI Conventions.
-- [ ] Exact Figma frame/modal node links and visual review against F-01 are verified by the team.
-- [ ] Open questions 1–4 and 6–7 are clarified with the system owner/team.
-- [ ] Peer review is completed and the draft is marked reviewed.
+- [x] A separate cropped 1440 × 1024 PNG exists for S-F02-03 Default and is embedded above.
+- [x] Numbered Default and Validation Error PNGs exist, and their mint callouts match the element-inventory numbers.
+- [x] Four editor state PNGs and the M-F02-03 overlay have original and numbered versions linked in section 2.
+- [x] M-F02-03 is shown as an actual confirmation overlay: callouts 13 (dialog), 14 (rule-set summary), 15 (Cancel), 16 (Confirm Activation).
+- [x] Required parameter/source/effective-date inputs and associated validation/error behavior are identified.
+- [x] Save Draft and activation are separate, with FR-02-15–17 and shared FR-04-03–04 traced to W1 and AD/SD-UC-08.
+- [x] Navigation and role-aware layout follow the existing Screen List, Screen Transition and UI Conventions.
+- [ ] Numbered PNGs have been visually verified against the latest native Figma frame; PNGs are annotations of the prior UI Kit render.
+- [ ] Action-specific access-denied feedback (inventory item 17) has no separate image state; if required by the team, design/export it.
+- [ ] Review Activation ordering, parameter validation policy, lifecycle and open questions 1–4, 6–7, 10 are resolved.
+- [ ] Peer review completed; mark Status as Reviewed only after sign-off.
