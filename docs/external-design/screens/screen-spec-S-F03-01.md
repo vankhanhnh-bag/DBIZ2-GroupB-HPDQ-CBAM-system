@@ -30,9 +30,14 @@
 ## 2. Mockup
 
 
-<img width="1440" height="1024" alt="image" src="[docs/external-design/screens/img/S-F03-01 — Default — numbered.png](https://github.com/vankhanhnh-bag/TEAM-B-DBIZ-2-HPDQ-CBAM-system/blob/98e697f1ff156697e5463e1df8d785e90f34d6fa/docs/external-design/screens/img/S-F03-01%20%E2%80%94%20Default%20%E2%80%94%20numbered.png)" />
 
-<img width="1440" height="1024" alt="S-F01-01 — Default - numbered" src="https://github.com/user-attachments/assets/b6b053d6-0239-4fc7-be1f-1025ed7c0c1c" />
+<img width="1453" height="1037" alt="S-F03-01 — Default — numbered" src="https://github.com/user-attachments/assets/5d8a0681-642f-4f95-8b9d-8884fc0569bf" />
+<img width="1453" height="1037" alt="S-F03-01 — Validation Error — numbered" src="https://github.com/user-attachments/assets/d3a2dae6-be69-4378-8625-509218bb1b79" />
+<img width="1453" height="1037" alt="S-F03-01 — No Matching Products — numbered" src="https://github.com/user-attachments/assets/95675bbb-925d-4f96-8ece-875b2f1df107" />
+<img width="1453" height="1037" alt="S-F03-01 — Loading · Comparing — numbered" src="https://github.com/user-attachments/assets/0ac44dde-4ec0-4080-b24e-d2ee63ec1a66" />
+<img width="1453" height="1037" alt="S-F03-01 — Dropdown Open — numbered" src="https://github.com/user-attachments/assets/2765cfe9-13a8-48cc-8c50-b1f652990a8f" />
+<img width="1453" height="1037" alt="S-F03-01 — Data Error — numbered" src="https://github.com/user-attachments/assets/279da112-2362-40e2-90d4-e739c562fd3f" />
+<img width="1453" height="1037" alt="S-F03-01 — Criteria Selected — numbered" src="https://github.com/user-attachments/assets/578df319-0bad-443c-bba1-06b428f036c1" />
 
 
 
