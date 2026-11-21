@@ -29,28 +29,34 @@
 **The user leaves this screen when:** they review the saved confirmation or navigate to another permitted EcoTrace workspace feature. UC-02 does not specify a separate post-save destination.
 
 ## 2. Mockup
+<img width="1440" height="1024" alt="image" src="https://github.com/user-attachments/assets/44977b37-ba30-4d17-bda2-0b7810138f19" />
 
-The Figma plugin creates five editable 1440 × 1024 frames on a dedicated page:
+**Default, numbered**
 
-| Frame | State |
-|---|---|
-| `S-F01-03 — Default` | Ready to configure methodology version and emission factor |
-| `S-F01-03 — Loading · Validating & Saving` | Parameters are being validated, version existence is checked, and the record/audit event is processed |
-| `S-F01-03 — Validation Error` | Parameters are invalid; user corrects the form |
-| `S-F01-03 — Change Justification Required` | Existing factor/version detected; user must provide a reason before the change can be stored |
-| `S-F01-03 — Success · Version Saved` | New version is stored, previous version retained, and audit event recorded |
+<img width="1440" height="1024" alt="S-F01-03 — Default - numbered" src="https://github.com/user-attachments/assets/bad5ba2b-bb5a-467d-afc8-d7234b058e25" />
 
-The visual language follows `ui-conventions.md`: Hòa Phát navy, EcoTrace blue/mint accents, white content surfaces, compact operational-user sidebar, top app bar, clear form labels, restrained borders and readable feedback banners.
+**Loading, numbered**
 
-The standard operational-user sidebar contains Overview, F-01, F-02, F-03 and Help & Support. **It does not show F-04 Platform / Administration.** F-04 navigation is reserved for authorized System Admins / Auditors.
+<img width="1440" height="1024" alt="S-F01-03 — Loading · Validating   Saving - numbered" src="https://github.com/user-attachments/assets/29be2692-8d0c-4653-9d96-03051a53ffd4" />
+ 
+**Success, numbered**
 
-No live methodology names, factor values, units, dates, actor names or audit identifiers are fabricated. Any placeholder values in the Figma frames are labelled as prototype placeholders.
+<img width="1440" height="1024" alt="S-F01-03 — Success · Version Saved - numbered" src="https://github.com/user-attachments/assets/cd035ed8-b358-4e16-8a3e-ecaaaa024491" />
+
+**Error, numbered**
+
+<img width="1440" height="1024" alt="S-F01-03 — Validation Error - numbered" src="https://github.com/user-attachments/assets/bdd16167-09e4-42c0-8e68-90fdffb256f2" />
+
+**Change justification, numbered**
+
+<img width="1440" height="1024" alt="S-F01-03 — Change Justification Required - numbered" src="https://github.com/user-attachments/assets/2aab388b-1a78-492e-9d91-472ba481fac9" />
+
 
 ## 3. Element inventory
 
 | # | Element | Type | Content / data source | Required | Validation / behaviour |
 |---|---|---|---|---|---|
-| 1 | Operational application shell | Sidebar + top bar | EcoTrace navigation; signed-in Sustainability & ESG role | Yes | Shows Overview, applicable F-01/F-02/F-03 destinations and Help & Support only; hides F-04 administration navigation from standard users. Authorization remains enforced by the platform (FR-04-03). |
+| 1 | Application shell | Sidebar + top bar | EcoTrace navigation; signed-in Sustainability & ESG role | Yes | Shows Overview, applicable F-01/F-02/F-03 destinations and Help & Support only; hides F-04 administration navigation from standard users. Authorization remains enforced by the platform (FR-04-03). |
 | 2 | Breadcrumb and page title | Header | Carbon Traceability & PCF / GHG Methodology & Emission Factors | Yes | Identifies the current screen. |
 | 3 | Methodology version | Text input / version identifier | Methodology version supplied by Sustainability & ESG user (FR-01-02; SD-UC-02) | Yes | Must capture the configured methodology version. Exact version naming pattern is not specified. |
 | 4 | Factor value | Numeric input | GHG emission factor value supplied by Sustainability & ESG user (FR-01-02) | Yes | Must capture the factor value. Allowed range, precision and numeric representation are not specified. |
@@ -63,6 +69,7 @@ No live methodology names, factor values, units, dates, actor names or audit ide
 | 11 | Version history note | Read-only information panel | Versioning behaviour: create a new version and keep the previous version (SD-UC-02; AD-UC-02 s6) | Yes | Do not silently overwrite the previous version. |
 | 12 | Audit-trail note | Read-only information panel / success detail | Audit entry fields: who, when, old-to-new values, reason (SD-UC-02; AD-UC-02 s7) | Yes, in success state | Show a concise confirmation that the audit event was recorded. Do not invent actor names, timestamps or event IDs. |
 | 13 | Saved confirmation | Success banner / confirmation panel | Saved confirmation returned by EcoTrace (SD-UC-02; AD-UC-02) | Conditional | Display only after the new version is stored and the audit event is recorded. |
+| 14 | Configuration overview |  |  |  | |
 
 ## 4. States
 
