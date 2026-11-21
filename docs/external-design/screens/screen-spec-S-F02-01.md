@@ -31,44 +31,30 @@
 
 ## 2. Mockup
 
-### Numbering
+![S-F02-01 — Default](img/S-F02-01%20-%20Default.png)
 
-Each number corresponds to the # of the element inventory in section 3. The numbered mockups below use the same presentation approach as the other screen specs.
+**Numbered:** each number refers to the matching # in the element inventory in section 3. All five numbered UI states are shown directly below. The two modal surfaces are included after the screen states.
 
-**Default — numbered**
-
-![S-F02-01 — Default — numbered](img/S-F02-01%20-%20Default%20-%20numbered.png)
-
-**Empty — numbered**
-
-![S-F02-01 — Empty — numbered](img/S-F02-01%20-%20Empty%20-%20numbered.png)
-
-**Loading — numbered**
-
-![S-F02-01 — Loading — numbered](img/S-F02-01%20-%20Loading%20-%20numbered.png)
-
-**Validation Error — numbered**
-
-![S-F02-01 — Validation Error — numbered](img/S-F02-01%20-%20Validation%20Error%20-%20numbered.png)
-
-**Success — numbered**
-
-![S-F02-01 — Success — numbered](img/S-F02-01%20-%20Success%20-%20numbered.png)
-
-### State images
-
-| State | Image |
+| Default — numbered | Empty — numbered |
 |---|---|
-| Default | [S-F02-01 - Default](img/S-F02-01%20-%20Default.png) |
-| Empty | [S-F02-01 - Empty](img/S-F02-01%20-%20Empty.png) |
-| Loading | [S-F02-01 - Loading](img/S-F02-01%20-%20Loading.png) |
-| Validation Error | [S-F02-01 - Validation Error](img/S-F02-01%20-%20Validation%20error.png) |
-| Success | [S-F02-01 - Success](img/S-F02-01%20-%20Success.png) |
-| M-F02-01 — CBAM Result & Share | [M-F02-01 — CBAM Result & Share](img/M-F02-01%20%E2%80%94%20CBAM%20Result%20%26%20Share) |
-| M-F02-02 — View Assumptions | [M-F02-02 — View Assumptions](img/M-F02-02%20%E2%80%94%20View%20Assumptions) |
+| ![S-F02-01 — Default numbered](img/S-F02-01%20-%20Default%20-%20numbered.png) | ![S-F02-01 — Empty numbered](img/S-F02-01%20-%20Empty%20-%20numbered.png) |
 
+| Loading — numbered | Validation Error — numbered |
+|---|---|
+| ![S-F02-01 — Loading numbered](img/S-F02-01%20-%20Loading%20-%20numbered.png) | ![S-F02-01 — Validation Error numbered](img/S-F02-01%20-%20Validation%20Error%20-%20numbered.png) |
 
-## 3. Element inventory
+| Success — numbered | |
+|---|---|
+| ![S-F02-01 — Success numbered](img/S-F02-01%20-%20Success%20-%20numbered.png) | |
+
+**Modal surfaces — numbered:** each number refers to the matching modal-related element in the element inventory in section 3.
+
+| M-F02-01 — CBAM Result & Share | M-F02-02 — View Assumptions |
+|---|---|
+| ![M-F02-01 — CBAM Result & Share numbered](img/M-F02-01%20-%20CBAM%20Result%20%26%20Share%20-%20numbered.png) | ![M-F02-02 — View Assumptions numbered](img/M-F02-02%20-%20View%20Assumptions%20-%20numbered.png) |
+
+All colours, fonts and corners follow the shared design conventions in
+[ui-conventions.md](../ui-conventions.md).
 
 ## 3. Element inventory
 
