@@ -1,4 +1,4 @@
-<img width="1440" height="1024" alt="image" src="https://github.com/user-attachments/assets/694669b1-28be-45cb-93a6-3aaa0981356c" /># Screen Spec: S-F01-01 Shipment-level PCF Calculation
+# Screen Spec: S-F01-01 Shipment-level PCF Calculation
 
 > **Product:** EcoTrace — HPDQ Carbon Management & Reporting System  
 > **Status:** Draft — initial Figma frame exists; result and missing-data state frames are specified below but not yet placed on the Figma canvas.  
