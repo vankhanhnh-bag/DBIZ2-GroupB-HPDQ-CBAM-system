@@ -33,18 +33,7 @@
 
 ![S-F02-01 — Default](img/S-F02-01%20%E2%80%94%20Default)
 
-**Numbered:** each number corresponds to the # of the element inventory in section 3. The numbered version below identifies the main visible elements on the default screen.
-
-![S-F02-01 — Default, numbered](img/S-F02-01-numbered.png)
-
-| # | Element |
-|---|---|
-| 1 | Application shell |
-| 2 | Breadcrumb and page title |
-| 3 | Order / Shipment selector |
-| 4 | Shipment input fields: product, net weight, country of export and planned departure |
-| 5 | Shipment / PCF data status |
-| 6 | Calculate CBAM Estimate |
+**Numbered:** each number corresponds to the # of the element inventory in section 3.
 
 ### State images
 
