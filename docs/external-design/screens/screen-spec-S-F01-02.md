@@ -15,7 +15,7 @@
 | Activity diagram | AD-UC-01 — submit delivery, validate required information, correct/resubmit when invalid, store the record, review success/failure outcome |
 | Sequence diagram | SD-UC-01 — submit supplier delivery; validate; store; return success or failure outcome |
 | Linked requirement | FR-01-01 (Must) |
-| Mockup / Figma plugin |  |
+| Mockup / Figma plugin | [Five numbered state mockups in §2](#2-mockup) — Default, Loading / Submitting, Success, Validation Error and Save Failure. Figma plugin task: **EcoTrace — Build S-F01-02 States**; creates five editable state frames on page **02 — F-01 Supplier & Raw Material Carbon Data Entry**. |
 | Inputs | Supplier identity; raw material type; quantity; supplier-declared carbon data |
 | Important limitation | Exact validation rules, quantity/carbon units, supplier lookup method, and post-save-failure input retention are not defined in the current source documents. |
 
@@ -69,7 +69,7 @@
 | 10 | Save-failure feedback | Error banner | Save failure outcome returned by the service / store (SD-UC-01, AD-UC-01) | Conditional | Clearly state that the delivery record was not saved. Do not imply successful persistence. |
 | 11 | Success confirmation | Success banner / confirmation panel | Save confirmation returned by the data store through the service (SD-UC-01) | Conditional | Confirm that the supplier/raw-material carbon record was stored. Do not invent a generated record ID or timestamp. |
 | 12 | Captured data summary | Read-only summary | The four submitted values | Success state | Show values returned / confirmed by the saved record. If actual values are not available in the response contract, do not fabricate them. |
-| 13 | Submission flow |  |  | | |
+| 13 | Submission flow | Read-only process-flow panel / ordered stepper | Three stages from UC-01: (1) Validate delivery information — Supplier carbon API; (2) Store supplier/raw-material carbon record — EcoTrace carbon data store; (3) Return submission outcome — submission result sent to the Supplier carbon entry form / Procurement Department (SD-UC-01, AD-UC-01, FR-01-01) | Yes — informational flow panel remains visible on the screen | Show the three stages in order. Storage is attempted only when the submitted information passes validation. If validation fails, return validation errors and request correction; the user may correct and resubmit, and the storage stage is not reached for that failed attempt. If storage succeeds, return the successful-submission confirmation; if storage fails, return the unsuccessful outcome (**Submission not saved**) and do not imply that a record was saved. The panel is explanatory, not an interactive control or a record-status indicator. Do not imply automatic retry after a save failure. | |
 
 ## 4. States
 
