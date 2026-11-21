@@ -31,23 +31,39 @@
 
 ## 2. Mockup
 
-![S-F02-01 — Default](img/S-F02-01%20%E2%80%94%20Default)
+### Numbering
 
-**Numbered:** each number corresponds to the # of the element inventory in section 3.
+Each number corresponds to the # of the element inventory in section 3. The numbered mockups below use the same presentation approach as the other screen specs.
+
+**Default — numbered**
+
+![S-F02-01 — Default — numbered](img/S-F02-01%20-%20Default%20-%20numbered.png)
+
+**Loading — numbered**
+
+![S-F02-01 — Loading — numbered](img/S-F02-01%20-%20Loading%20-%20numbered.png)
+
+**Validation Error — numbered**
+
+![S-F02-01 — Validation Error — numbered](img/S-F02-01%20-%20Error%20-%20numbered.png)
+
+**Success — numbered**
+
+![S-F02-01 — Success — numbered](img/S-F02-01%20-%20Success%20-%20numbered.png)
 
 ### State images
 
 | State | Image |
 |---|---|
-| Default | [S-F02-01 — Default](img/S-F02-01%20%E2%80%94%20Default) |
-| Empty | [S-F02-01 — Empty](img/S-F02-01%20%E2%80%94%20Empty) |
-| Loading | [S-F02-01 — Loading](img/S-F02-01%20%E2%80%94%20Loading) |
-| Validation Error | [S-F02-01 — Validation Error](img/S-F02-01%20%E2%80%94%20Validation%20Error) |
-| Success | [S-F02-01 — Success](img/S-F02-01%20%E2%80%94%20Success) |
+| Default | [S-F02-01 - Default](img/S-F02-01%20-%20Default.png) |
+| Empty | [S-F02-01 - Empty](img/S-F02-01%20-%20Empty.png) |
+| Loading | [S-F02-01 - Loading](img/S-F02-01%20-%20Loading.png) |
+| Validation Error | [S-F02-01 - Validation Error](img/S-F02-01%20-%20Validation%20error.png) |
+| Success | [S-F02-01 - Success](img/S-F02-01%20-%20Success.png) |
 | M-F02-01 — CBAM Result & Share | [M-F02-01 — CBAM Result & Share](img/M-F02-01%20%E2%80%94%20CBAM%20Result%20%26%20Share) |
 | M-F02-02 — View Assumptions | [M-F02-02 — View Assumptions](img/M-F02-02%20%E2%80%94%20View%20Assumptions) |
 
-All images above are the existing mockup assets in `docs/external-design/screens/img/`. The five S-F02-01 images document the main screen states; the two M-F02-01 / M-F02-02 images document the result and assumptions overlays.
+The Empty state is retained in the state-image list, but no numbered Empty asset is currently present in the image folder.
 
 ## 3. Element inventory
 
