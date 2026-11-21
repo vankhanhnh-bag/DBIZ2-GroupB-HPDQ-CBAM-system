@@ -10,7 +10,7 @@
 | Priority | Must |
 | Feature | F-02 CBAM Compliance & Carbon Cost Estimation |
 | Activity diagrams | AD-UC-08 (actions "Review rule settings", "Create or edit a draft", "See access denied") |
-| Mockup images | `img/S-F02-02 — Default.png` (default), `S-F02-02 — Default — numbered.png`, four state images (section 2) |
+| Mockup images | `img/S-F02-02 — Default.png` (default), `img/S-F02-02 — Default — numbered.png`, four state images (section 2) |
 | Frame width | 1440px (exported at 1×, 1440 pixels) |
 | Figma frame | [01 — Done screens](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=8-73) |
 | Status | Draft for team review |
