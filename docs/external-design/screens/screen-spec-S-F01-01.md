@@ -13,9 +13,10 @@
 | Feature | F-01 Carbon Traceability & Product Carbon Footprint Management |
 | Use case | UC-04 Calculate shipment-level PCF |
 | Activity diagram | AD-UC-04 — select shipment, check required shipment/batch references, request logistics emissions, calculate, store and review shipment PCF |
-| Linked sequence | SD-UC-04 — shipment context from SAP S/4HANA; constituent-batch linkage and carbon intensity; logistics emissions from Hoa Phat Logistics; calculation, storage and display |
-| Mockup | docs/external-design/screens/img/S-F01-01 — Default.png |
-| Status values | `Calculated` is the only shipment-PCF state explicitly named in AD-UC-04. Do not invent additional persisted business statuses. |
+| Sequence diagram | SD-UC-04 — shipment context from SAP S/4HANA; constituent-batch linkage and carbon intensity; logistics emissions from Hoa Phat Logistics; calculation, storage and display |
+| Mockup / Figma plugin | docs/external-design/screens/img/S-F01-01 — Default.png |
+| Inputs |  |
+| Important limitation | |
 
 ## 1. Purpose
 
