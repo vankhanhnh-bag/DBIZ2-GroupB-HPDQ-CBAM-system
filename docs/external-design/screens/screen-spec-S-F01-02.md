@@ -15,7 +15,7 @@
 | Activity diagram | AD-UC-01 — submit delivery, validate required information, correct/resubmit when invalid, store the record, review success/failure outcome |
 | Sequence diagram | SD-UC-01 — submit supplier delivery; validate; store; return success or failure outcome |
 | Linked requirement | FR-01-01 (Must) |
-| Mockup / Figma plugin | EcoTrace — Build S-F01-02 States; creates five editable state frames on page 02 — F-01 Supplier Data Entry |
+| Mockup / Figma plugin |  |
 | Inputs | Supplier identity; raw material type; quantity; supplier-declared carbon data |
 | Important limitation | Exact validation rules, quantity/carbon units, supplier lookup method, and post-save-failure input retention are not defined in the current source documents. |
 
@@ -31,19 +31,29 @@
 
 ## 2. Mockup
 
-The Figma plugin creates five editable 1440 × 1024 frames on a dedicated page:
+<img width="1440" height="1024" alt="image" src="https://github.com/user-attachments/assets/96a5f59f-3ef2-4609-951b-c1d2615ec9d4" />
 
-| Frame | State |
-|---|---|
-| S-F01-02 — Default | Empty data-entry form |
-| S-F01-02 — Loading · Submitting | Submission request in progress |
-| S-F01-02 — Validation Error | Correction required; user can resubmit |
-| S-F01-02 — Save Failure | Record was not stored; no retry action is shown because AD-UC-01 does not define a save-failure retry |
-| S-F01-02 — Success | Record stored and submission confirmation shown |
+Numbered: each number is the # of the element inventory in section 3. Element 8 (Error banner) appears only in the error state, so it is numbered on the error image.
 
-The visual language follows ui-conventions.md: Hòa Phát navy, EcoTrace mint/blue accents, white content surfaces, compact sidebar, top app bar, clear form labels, restrained borders and readable feedback banners.
+**Default, numbered**
 
-The screen must not use invented live supplier names, material values, quantities, carbon figures or units. Any sample content in the Figma frames is explicitly placeholder content.
+<img width="1440" height="1024" alt="S-F01-02 — Default - numbered" src="https://github.com/user-attachments/assets/51486efc-027c-4e97-a8fa-e9d6545699f7" />
+
+**Loading, numbered**
+
+<img width="1440" height="1024" alt="S-F01-02 — Loading · Submitting - numbered" src="https://github.com/user-attachments/assets/0b08da9b-1c14-43ed-82de-b380ecf5aa4e" />
+ 
+**Success, numbered**
+
+<img width="1440" height="1024" alt="S-F01-02 — Success - numbered" src="https://github.com/user-attachments/assets/f73526ab-7052-4497-8d3a-28c7ace6a2f2" />
+
+**Error, numbered**
+
+<img width="1440" height="1024" alt="S-F01-02 — Validation Error - numbered" src="https://github.com/user-attachments/assets/33d77002-137c-4816-9910-ea32387b35e5" />
+
+**Save failure, numbered**
+
+<img width="1440" height="1024" alt="S-F01-02 — Save Failure - numbered" src="https://github.com/user-attachments/assets/a852755f-b448-461e-a6f4-4141487d2315" />
 
 ## 3. Element inventory
 
@@ -61,6 +71,7 @@ The screen must not use invented live supplier names, material values, quantitie
 | 10 | Save-failure feedback | Error banner | Save failure outcome returned by the service / store (SD-UC-01, AD-UC-01) | Conditional | Clearly state that the delivery record was not saved. Do not imply successful persistence. |
 | 11 | Success confirmation | Success banner / confirmation panel | Save confirmation returned by the data store through the service (SD-UC-01) | Conditional | Confirm that the supplier/raw-material carbon record was stored. Do not invent a generated record ID or timestamp. |
 | 12 | Captured data summary | Read-only summary | The four submitted values | Success state | Show values returned / confirmed by the saved record. If actual values are not available in the response contract, do not fabricate them. |
+| 13 | Submission flow |  |  | | |
 
 ## 4. States
 
@@ -71,7 +82,7 @@ The five states below map to the initial form and the outcomes described by SD-U
 | **1. Default — Ready to submit** | Empty form with four labelled inputs: Supplier identity, Raw material type, Quantity, and Supplier-declared carbon data. Primary action: **Submit supplier delivery**. | Procurement opens S-F01-02. | FR-01-01 defines the four data groups; AD-UC-01 starts with submission of supplier delivery information. |
 | **2. Loading — Submitting** | The entered form remains visible; inputs are temporarily disabled; the primary button shows **Submitting…** with a progress indicator. A neutral message explains that EcoTrace is validating and submitting the delivery. | User selects **Submit supplier delivery** and the request is being processed. | Transient feedback inferred from the request/response sequence. No new persisted business status is introduced. |
 | **3. Validation Error — Correction required** | Error banner: **Some delivery information is missing or invalid.** Supporting text: **Review the validation feedback, correct the affected fields, and submit again.** Form remains editable; primary action returns to **Submit supplier delivery**. Field-level feedback is shown only for fields identified by the validator. | The system determines that required delivery information is missing or invalid. | SD-UC-01 validation alternative; AD-UC-01 decision d1 [no] and correction loop. Exact mandatory-field logic and error messages remain TBD. |
-| **4. Save Failure — Submission not saved** | Error banner: **Submission not saved.** Supporting text: **EcoTrace could not store this supplier delivery record. No record was saved.** The screen does not show a successful confirmation. No automatic retry or **Try again** action is displayed in this version. | Information passed validation, but storage returned a failure outcome. | SD-UC-01 save-failure alternative; AD-UC-01 decision d2 [no]. AD-UC-01 ends after the unsuccessful outcome and does not specify a save-failure retry. Whether the entered values remain on screen is an open question. |
+| **4. Save Failure — Submission not saved** | Error banner: **Submission not saved.** Supporting text: **EcoTrace could not store this supplier delivery record. No record was saved.** The screen does not show a successful confirmation. | Information passed validation, but storage returned a failure outcome. | SD-UC-01 save-failure alternative; AD-UC-01 decision d2 [no]. AD-UC-01 ends after the unsuccessful outcome and does not specify a save-failure retry. Whether the entered values remain on screen is an open question. |
 | **5. Success — Submission saved** | Success banner: **Supplier delivery submitted successfully.** A read-only confirmation area summarises Supplier identity, Raw material type, Quantity and Supplier-declared carbon data using the values from the successful submission. | The data store confirms that the record was stored successfully. | SD-UC-01 save-success alternative; AD-UC-01 decision d2 [yes], followed by confirmation and Procurement review. The confirmation wording is a team-confirmed outcome, not a separate SHALL sentence in W1. |
 
 ## 5. Interactions and navigation
