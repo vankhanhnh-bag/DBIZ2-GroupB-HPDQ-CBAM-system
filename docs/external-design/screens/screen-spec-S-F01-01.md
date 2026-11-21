@@ -1,4 +1,4 @@
-# Screen Spec: S-F01-01 Shipment-level PCF Calculation
+<img width="1440" height="1024" alt="image" src="https://github.com/user-attachments/assets/694669b1-28be-45cb-93a6-3aaa0981356c" /># Screen Spec: S-F01-01 Shipment-level PCF Calculation
 
 > **Product:** EcoTrace — HPDQ Carbon Management & Reporting System  
 > **Status:** Draft — initial Figma frame exists; result and missing-data state frames are specified below but not yet placed on the Figma canvas.  
@@ -28,16 +28,31 @@
 **The user leaves this screen when:** they navigate back to the EcoTrace workspace or continue to another feature using the shipment PCF. UC-04 itself does not specify a dedicated post-calculation destination.
 
 ## 2. Mockup
-![S-F01-01](docs/external-design/screens/img/S-F01-01 — Default.png)
+
+<img width="1440" height="1024" alt="image" src="https://github.com/user-attachments/assets/92abe4f5-9ff1-4aea-a9f0-ce499d0dbda7" />
+
 Numbered: each number is the # of the element inventory in section 3. Element 8 (Error banner) appears only in the error state, so it is numbered on the error image.
 
-| Default, numbered | Loading, numbered |
-|---|---|
-| ![S-F01-01 numbered](docs/external-design/screens/img/S-F01-01 — Default - numbered.png) | ![S-F01-01 loading numbered](docs/external-design/screens/img/S-F01-01 — Loading - numbered.png) |
-| Success, numbered | Error, numbered |
-|---|---|
-| ![S-F01-01 success numbered](docs/external-design/screens/img/S-F01-01 — Success · Calculated - numbered.png) | ![S-F01-01 error numbered](docs/external-design/screens/img/S-F01-01 — Error - numbered.png) |
-![S-F01-01 missing data numbered](docs/external-design/screens/img/S-F01-01 — Missing required data - numbered.png)
+**Default, numbered**
+
+<img width="1440" height="1024" alt="S-F01-01 — Default - numbered" src="https://github.com/user-attachments/assets/b6b053d6-0239-4fc7-be1f-1025ed7c0c1c" />
+
+**Loading, numbered**
+
+<img width="1440" height="1024" alt="S-F01-01 — Loading - numbered" src="https://github.com/user-attachments/assets/6229e849-9642-4848-8e97-e0167ed07e8c" />
+ 
+**Success, numbered**
+
+<img width="1440" height="1024" alt="S-F01-01 — Success · Calculated - numbered" src="https://github.com/user-attachments/assets/f4147388-a5cd-423b-a078-ceed729eb927" />
+
+**Error, numbered**
+
+<img width="1440" height="1024" alt="S-F01-01 — Error - numbered" src="https://github.com/user-attachments/assets/08343488-5022-47b9-874a-927a7a562ae4" />
+
+**Missing data, numbered**
+
+<img width="1440" height="1024" alt="S-F01-01 — Missing required data - numbered" src="https://github.com/user-attachments/assets/c4dafe91-6b59-419a-b346-b73976e73b12" />
+
 ## 3. Element inventory
 
 | # | Element | Type | Content / data source | Required | Validation / behaviour |
