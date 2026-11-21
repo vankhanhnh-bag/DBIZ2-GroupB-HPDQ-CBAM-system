@@ -35,7 +35,7 @@
 
 **Numbered:** each number corresponds to the # of the element inventory in section 3. The numbered version below identifies the main visible elements on the default screen.
 
-![S-F02-01 — Default, numbered](img/S-F02-01-numbered.svg)
+![S-F02-01 — Default, numbered](img/S-F02-01-numbered.png)
 
 | # | Element |
 |---|---|
