@@ -8,16 +8,16 @@
 |---|---|
 | Screen ID | S-F01-03 |
 | Screen name | GHG Methodology & Emission Factor Library |
-| Actor | Sustainability & ESG Department |
+| Actor | Sustainability & ESG user (Sustainability & ESG Department) |
 | Priority | Must |
 | Feature | F-01 Carbon Traceability & Product Carbon Footprint Management |
 | Use case | UC-02 Manage GHG methodology & emission factors |
-| Activity diagram | AD-UC-02 — enter parameters, validate, check for an existing factor/version, require justification for changes, version the record, write the audit event, and confirm success |
+| Activity diagram | AD-UC-02 — enter methodology version, factor value, unit and effective date; validate; check whether the factor/version exists; request a change justification for an existing factor/version; set creation/update metadata; create a new version while keeping the previous version; write the audit event; and confirm success |
 | Sequence diagram | SD-UC-02 — submit methodology version, factor value, unit and effective date; validate; check version existence; request change justification when the factor/version exists; store/version and write audit log |
 | Linked requirement | FR-01-02 (Must) |
-| Mockup / Figma plugin | Five numbered state mockups in §2 — Default, Loading / Validating & Saving, Success / Version Saved, Validation Error and Change Justification Required. Figma plugin task: **EcoTrace — Build S-F01-03 States**; intended target page: **03 — F-01 GHG Methodology & Emission Factor Library** (five editable state frames). |
-| Inputs | Methodology version; factor value; unit; effective date; conditional change justification |
-| Important limitation | Exact validation ranges, allowed units, methodology/factor naming scheme, effective-date conflict rules and justification policy wording are not specified in FR-01-02. |
+| Mockup / Figma plugin | [Five numbered state mockups in §2](#2-mockup) — Default, Loading / Validating & Saving, Success / Version Saved, Validation Error and Change Justification Required. Planned Figma plugin task (not yet executed): **EcoTrace — Build S-F01-03 States**; intended target page: **03 — F-01 GHG Methodology & Emission Factor Library** (five editable state frames). |
+| Inputs | Methodology version; factor value; unit; effective date; change justification only when an existing factor/version is detected (SD-UC-02; AD-UC-02) |
+| Important limitation | W1 FR-01-02 explicitly requires storage of methodology version, factor value, unit and effective date; its BE work item specifies validation, storage and versioning. The existing-factor justification, Created/Updated By/At metadata and audit-log details are described in SD-UC-02 / AD-UC-02 but are not separate SHALL clauses in W1. Exact factor/methodology identifiers, validation ranges, permitted units, effective-date conflict rules and justification policy are not specified. The lifecycle status of the previous version and the handling/rollback behaviour if library or audit-log writes fail also remain unresolved. |
 
 ## 1. Purpose
 
@@ -142,7 +142,7 @@ The justification, metadata and audit-log details are modelled in SD-UC-02 and A
 | 1 | What is the canonical identifier/name of a methodology or emission factor, in addition to methodology version, factor value, unit and effective date? | Yes — for final record lookup and form design | Open. The sequence diagram only explicitly lists the four inputs; no separate name/code field is invented. |
 | 2 | What validation ranges, precision rules, allowed units and date/effective-period rules apply? | Yes — for final validation and acceptance criteria | Open. UI shows neutral inputs; it does not invent constraints. |
 | 3 | What is the required content/length policy for change justification? | Yes — for final validation of existing-factor changes | Open. A required text area is shown, but no minimum length or accepted reason taxonomy is assumed. |
-| 4 | AD-UC-02 states that the previous version is kept active alongside the new version. Is this intended for every factor and methodology type? | No — but confirm before implementation | AD-UC-02 reading note is followed as currently written; previous version is retained. |
+| 4 | What lifecycle status, if any, should the previous version have when a new version is created (for example, remain active or become superseded)? | No — but confirm before implementation | SD-UC-02 / AD-UC-02 require keeping the previous version but do not assign it an explicit lifecycle status. Preserve the previous version without labelling it Active or Superseded until the team confirms the rule. |
 | 5 | If the library write or audit-log write fails, what should the user see and does the system roll back the new version? | Yes — before designing a system/network error state | Open. The current sequence/activity diagrams do not define a storage/audit failure branch; no rollback or failure state is invented. |
 
 ---
