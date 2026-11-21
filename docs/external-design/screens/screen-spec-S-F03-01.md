@@ -30,7 +30,10 @@
 ## 2. Mockup
 
 
-<img width="1440" height="1024" alt="image" src="docs/external-design/screens/img/S-F03-01 — Default — numbered.png" />
+<img width="1440" height="1024" alt="image" src="[docs/external-design/screens/img/S-F03-01 — Default — numbered.png](https://github.com/vankhanhnh-bag/TEAM-B-DBIZ-2-HPDQ-CBAM-system/blob/98e697f1ff156697e5463e1df8d785e90f34d6fa/docs/external-design/screens/img/S-F03-01%20%E2%80%94%20Default%20%E2%80%94%20numbered.png)" />
+
+<img width="1440" height="1024" alt="S-F01-01 — Default - numbered" src="https://github.com/user-attachments/assets/b6b053d6-0239-4fc7-be1f-1025ed7c0c1c" />
+
 
 
 The supplied design exports follow the agreed EcoTrace visual direction: dark navy left workspace sidebar (`EcoTrace · HPDQ`), white main canvas, breadcrumb header (`Green Steel / Product Comparison`), role badge (`Customers / Procurement`), two-column card layout (left: **Comparison criteria** form; right: **How the comparison works** & **Comparison flow** stepper), and bottom **Design preview** banner.
