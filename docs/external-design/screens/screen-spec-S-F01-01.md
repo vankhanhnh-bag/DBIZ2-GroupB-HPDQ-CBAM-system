@@ -14,7 +14,7 @@
 | Use case | UC-04 Calculate shipment-level PCF |
 | Activity diagram | AD-UC-04 — select shipment, check required shipment/batch references, request logistics emissions, calculate, store and review shipment PCF |
 | Linked sequence | SD-UC-04 — shipment context from SAP S/4HANA; constituent-batch linkage and carbon intensity; logistics emissions from Hoa Phat Logistics; calculation, storage and display |
-| Mockup | [Figma — S-F01-01 initial frame](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=11-2) |
+| Mockup | docs/external-design/screens/img/S-F01-01 — Default.png |
 | Status values | `Calculated` is the only shipment-PCF state explicitly named in AD-UC-04. Do not invent additional persisted business statuses. |
 
 ## 1. Purpose
@@ -28,26 +28,28 @@
 **The user leaves this screen when:** they navigate back to the EcoTrace workspace or continue to another feature using the shipment PCF. UC-04 itself does not specify a dedicated post-calculation destination.
 
 ## 2. Mockup
+![S-F01-01](docs/external-design/screens/img/S-F01-01 — Default.png)
+Numbered: each number is the # of the element inventory in section 3. Element 8 (Error banner) appears only in the error state, so it is numbered on the error image.
 
-The initial-state frame is already present in the Figma file. It uses the agreed EcoTrace visual direction: navy sidebar, white work area, blue primary action, mint accent, breadcrumb and dashboard-style panels.
-
-- [Open S-F01-01 initial state in Figma](https://www.figma.com/design/FTJibQtZrHIMHfwsJx7lT9/EcoTrace?node-id=11-2)
-- Two additional states are specified in section 4. They are not yet represented as separate Figma frames because the Figma Starter-plan MCP edit limit was reached during this design session.
-
-The supplied concept mockup is a visual reference only. It is not the source for shipment values, calculation results, units, or business rules.
-
+| Default, numbered | Loading, numbered |
+|---|---|
+| ![S-F01-01 numbered](docs/external-design/screens/img/S-F01-01 — Default - numbered.png) | ![S-F01-01 loading numbered](docs/external-design/screens/img/S-F01-01 — Loading - numbered.png) |
+| Success, numbered | Error, numbered |
+|---|---|
+| ![S-F01-01 success numbered](docs/external-design/screens/img/S-F01-01 — Success · Calculated - numbered.png) | ![S-F01-01 error numbered](docs/external-design/screens/img/S-F01-01 — Error - numbered.png) |
+![S-F01-01 missing data numbered](docs/external-design/screens/img/S-F01-01 — Missing required data - numbered.png)
 ## 3. Element inventory
 
 | # | Element | Type | Content / data source | Required | Validation / behaviour |
 |---|---|---|---|---|---|
-| 1 | App shell | Navigation shell | EcoTrace feature navigation; current signed-in role | Yes | For standard operational users, show Overview, applicable F-01 / F-02 / F-03 destinations and Help & Support only; hide F-04 administration links. Sign-in is a shared entry screen, not a sidebar item. F-04 navigation is reserved for authorized System Admins / Auditors. Authorization remains enforced by the platform (FR-04-03). |
+| 1 | Application shell | Sidebar + top bar | EcoTrace feature navigation; current signed-in role | Yes | For standard operational users, show Overview, applicable F-01 / F-02 / F-03 destinations and Help & Support only; hide F-04 administration links. Sign-in is a shared entry screen, not a sidebar item. F-04 navigation is reserved for authorized System Admins / Auditors. Authorization remains enforced by the platform (FR-04-03). |
 | 2 | Breadcrumb and page title | Header | Carbon Traceability & PCF / Shipment PCF | Yes | Current page is clearly identified. |
 | 3 | Shipment selector | Select / searchable input | Shipment identifier and related order/product context retrieved from SAP S/4HANA (SD-UC-04) | Yes | A shipment must be selected before calculation is requested. Preserve the source-system identifier. |
 | 4 | Calculate PCF | Primary button | Static action label | Yes | Enabled only when a shipment is selected; disable while the request is being processed. |
 | 5 | Data lineage and source systems | Read-only lineage / source-system panel | Four ordered steps: shipment and order context — SAP S/4HANA; batch linkage and carbon intensity — EcoTrace carbon data / traceability; applicable logistics emissions — Hoa Phat Logistics; shipment-level PCF aggregation — EcoTrace PCF service | Yes, after a shipment is selected | Show the source or processing step and its returned state. Use text labels such as `Available`, `Retrieved` or `Unavailable` as supported by the response. In a system/network error state, distinguish a source request that failed from a downstream step that was not completed whenever that information is available. Do not imply that every source system failed when the failure is only known to affect one request. |
 | 6 | Calculation basis | Read-only calculation-basis panel | The two input categories used by FR-01-05: constituent-batch carbon intensity and applicable logistics emissions | Yes, after a shipment is selected | Display the two input categories as separate, non-editable items. Show an input as `Unavailable` when its value was not returned. Do not invent a mathematical formula, input value, unit or aggregation rule beyond FR-01-05. |
 | 7 | Results | Summary cards and shipment-level PCF result card | Summary metrics for shipment-level PCF, constituent batches, batch carbon intensity and logistics emissions; final shipment-level PCF result | Yes, after the calculation request; content depends on its outcome | When calculation succeeds, show the returned values and their source units; show the PCF only with its confirmed unit and denominator. When a required source/network request fails, show `Unavailable` for values that were not returned and `No PCF result available` for the final result. Do not substitute zero, a stale result or an invented unit. |
-| 8 | Conditional error banner — PCF request could not be completed | Error banner / alert | Heading: **We couldn't complete the PCF request**. Body: **One or more required source or network requests failed. No shipment PCF result is available.** | Conditional — shown when a required source-system or network request fails | Place below the shipment-selection panel as shown in the System / Network Error mockup. Pair the error icon and message; do not rely on red colour alone. Keep the selected shipment visible. Name a specific failed source only when the response identifies it. This banner communicates the failed request; it does not define retry, rollback or data-retention behaviour. |
+| 8 | Error banner — PCF request could not be completed | Error banner / alert | Heading: **We couldn't complete the PCF request**. Body: **One or more required source or network requests failed. No shipment PCF result is available.** | Conditional | Place below the shipment-selection panel as shown in the System / Network Error mockup. Pair the error icon and message; do not rely on red colour alone. Keep the selected shipment visible. Name a specific failed source only when the response identifies it. This banner communicates the failed request; it does not define retry, rollback or data-retention behaviour. |
 ## 4. States
 
 | State | What the user sees | Trigger | Notes / source |
