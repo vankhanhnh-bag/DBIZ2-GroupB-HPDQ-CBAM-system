@@ -29,7 +29,9 @@
 
 ## 2. Mockup
 
-![S-F03-01](img/S-F03-01.png)
+
+<img width="1440" height="1024" alt="image" src="docs/external-design/screens/img/S-F03-01 — Default — numbered.png" />
+
 
 The supplied design exports follow the agreed EcoTrace visual direction: dark navy left workspace sidebar (`EcoTrace · HPDQ`), white main canvas, breadcrumb header (`Green Steel / Product Comparison`), role badge (`Customers / Procurement`), two-column card layout (left: **Comparison criteria** form; right: **How the comparison works** & **Comparison flow** stepper), and bottom **Design preview** banner.
 
