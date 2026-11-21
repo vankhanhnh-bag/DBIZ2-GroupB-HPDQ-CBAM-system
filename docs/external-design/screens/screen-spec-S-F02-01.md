@@ -31,55 +31,23 @@
 
 ## 2. Mockup
 
-### 2.1 Main screen states
-
-The main screen is represented by five separate editable frames. All five retain the shared Application sidebar, top application bar, page heading/context and Shipment Filter Bar. The Shipment Filter Bar contains the six visible fields: **Order No.**, **Shipment No.**, **Product**, **Net Weight**, **Country of Export** and **Planned Departure**. The primary action is positioned at the right side of this filter area; its label reflects the current state.
-
-**S-F02-01 - Default**
-
-Initial CBAM Estimation & Analysis workspace. The Shipment Filter Bar is available for selecting shipment information. The content area shows the empty state (**No CBAM estimate yet**) rather than calculation results.
-
 ![S-F02-01 — Default](img/S-F02-01%20%E2%80%94%20Default)
 
-**S-F02-01 - Empty**
+**Numbered:** each number should correspond to the element number in the element inventory in section 3. A numbered image is not currently present in `docs/external-design/screens/img/`; the image above is the original, unnumbered mockup. Do not treat the numbered version as available until that asset is added.
 
-Keeps the selected shipment context visible and presents a warning that verified PCF data is unavailable / not verified. The state explains that PCF data is required before calculation and provides the **Open S-F01-01** path to the shipment PCF screen.
+### State images
 
-![S-F02-01 — Empty](img/S-F02-01%20%E2%80%94%20Empty)
+| State | Image |
+|---|---|
+| Default | ![S-F02-01 — Default](img/S-F02-01%20%E2%80%94%20Default) |
+| Empty — Missing PCF | ![S-F02-01 — Empty](img/S-F02-01%20%E2%80%94%20Empty) |
+| Loading | ![S-F02-01 — Loading](img/S-F02-01%20%E2%80%94%20Loading) |
+| Validation Error | ![S-F02-01 — Validation Error](img/S-F02-01%20%E2%80%94%20Validation%20Error) |
+| Success | ![S-F02-01 — Success](img/S-F02-01%20%E2%80%94%20Success) |
+| M-F02-01 — CBAM Result & Share | ![M-F02-01 — CBAM Result & Share](img/M-F02-01%20%E2%80%94%20CBAM%20Result%20%26%20Share) |
+| M-F02-02 — View Assumptions | ![M-F02-02 — View Assumptions](img/M-F02-02%20%E2%80%94%20View%20Assumptions) |
 
-**S-F02-01 - Loading**
-
-Keeps the shipment context visible while CBAM estimation is being processed. The Calculate action shows a loading/progress treatment and the content area communicates that the calculation is in progress.
-
-![S-F02-01 — Loading](img/S-F02-01%20%E2%80%94%20Loading)
-
-**S-F02-01 - Validation Error**
-
-Keeps the shipment filter context and displays validation feedback for missing or invalid required information. Field-level or inline error treatments identify the information that needs attention; calculation is not presented as completed.
-
-![S-F02-01 — Validation Error](img/S-F02-01%20%E2%80%94%20Validation%20Error)
-
-**S-F02-01 - Success**
-
-Keeps the six selected shipment fields in the Shipment Filter Bar. The content area uses the existing **Calculation ready panel** to communicate that calculation is complete and the estimate is ready to review. The primary action remains in the filter area and is labelled **View CBAM Result** in the current mockup.
-
-![S-F02-01 — Success](img/S-F02-01%20%E2%80%94%20Success)
-
-### 2.2 Result and assumptions modal frames
-
-The two modal frames are shown as overlays on top of the underlying CBAM result context. They are separate editable Figma frames for documenting the modal surfaces, not additional standalone application pages.
-
-**M-F02-01 - CBAM Result & Share**
-
-Main result modal over a backdrop and underlying shipment summary/page context. The modal presents the CBAM result using KPI cards, a tabbed calculation-breakdown area/table, and the available actions **View Assumptions**, **Share** and **Download Report**.
-
-![M-F02-01 — CBAM Result & Share](img/M-F02-01%20%E2%80%94%20CBAM%20Result%20%26%20Share)
-
-**M-F02-02 - View Assumptions**
-
-Assumptions modal layered above the underlying M-F02-01 result modal. The backdrop and underlying result context remain visible to communicate the modal hierarchy. The foreground modal presents the assumptions for the current estimate, including regulation version, price reference date and calculation method, with a close action.
-
-![M-F02-02 — View Assumptions](img/M-F02-02%20%E2%80%94%20View%20Assumptions)
+All images above are the existing mockup assets in `docs/external-design/screens/img/`. The five S-F02-01 images document the main screen states; the two M-F02-01 / M-F02-02 images document the result and assumptions overlays.
 
 ## 3. Element inventory
 
