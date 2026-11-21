@@ -15,6 +15,7 @@
 | Activity diagram | AD-UC-02 — enter parameters, validate, check for an existing factor/version, require justification for changes, version the record, write the audit event, and confirm success |
 | Sequence diagram | SD-UC-02 — submit methodology version, factor value, unit and effective date; validate; check version existence; request change justification when the factor/version exists; store/version and write audit log |
 | Linked requirement | FR-01-02 (Must) |
+| Mockup / Figma plugin | Five numbered state mockups in §2 — Default, Loading / Validating & Saving, Success / Version Saved, Validation Error and Change Justification Required. Figma plugin task: **EcoTrace — Build S-F01-03 States**; intended target page: **03 — F-01 GHG Methodology & Emission Factor Library** (five editable state frames). |
 | Inputs | Methodology version; factor value; unit; effective date; conditional change justification |
 | Important limitation | Exact validation ranges, allowed units, methodology/factor naming scheme, effective-date conflict rules and justification policy wording are not specified in FR-01-02. |
 
@@ -69,7 +70,7 @@
 | 11 | Version history note | Read-only information panel | Versioning behaviour: create a new version and keep the previous version (SD-UC-02; AD-UC-02 s6) | Yes | Do not silently overwrite the previous version. |
 | 12 | Audit-trail note | Read-only information panel / success detail | Audit entry fields: who, when, old-to-new values, reason (SD-UC-02; AD-UC-02 s7) | Yes, in success state | Show a concise confirmation that the audit event was recorded. Do not invent actor names, timestamps or event IDs. |
 | 13 | Saved confirmation | Success banner / confirmation panel | Saved confirmation returned by EcoTrace (SD-UC-02; AD-UC-02) | Conditional | Display only after the new version is stored and the audit event is recorded. |
-| 14 | Configuration overview |  |  |  | |
+| 14 | Configuration overview | Read-only information panel / configuration-flow summary | The UC-02 configuration process: validate methodology version, factor value, unit and effective date; check whether the submitted factor/version already exists; conditionally request a change justification; create a new version while keeping the previous version; record creation/update metadata and an audit-log entry (FR-01-02, SD-UC-02, AD-UC-02) | Yes — informational panel shown alongside the configuration form | Explain the sequence and its conditional branch without acting as an additional control. For a new factor/version, the system sets Created By and Created At; for an existing factor/version, it requires a change justification and records Updated By, Updated At and the justification. A new version is created while the previous version is kept, then an audit entry records who, when, old-to-new values and reason. Do not imply an unapproved lifecycle status for the previous version or invent actor names, timestamps, version IDs or audit-event IDs. |
 
 ## 4. States
 
