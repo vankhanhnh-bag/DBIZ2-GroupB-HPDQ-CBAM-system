@@ -39,13 +39,13 @@
 
 | State | Image |
 |---|---|
-| Default | ![S-F02-01 — Default](img/S-F02-01%20%E2%80%94%20Default) |
-| Empty — Missing PCF | ![S-F02-01 — Empty](img/S-F02-01%20%E2%80%94%20Empty) |
-| Loading | ![S-F02-01 — Loading](img/S-F02-01%20%E2%80%94%20Loading) |
-| Validation Error | ![S-F02-01 — Validation Error](img/S-F02-01%20%E2%80%94%20Validation%20Error) |
-| Success | ![S-F02-01 — Success](img/S-F02-01%20%E2%80%94%20Success) |
-| M-F02-01 — CBAM Result & Share | ![M-F02-01 — CBAM Result & Share](img/M-F02-01%20%E2%80%94%20CBAM%20Result%20%26%20Share) |
-| M-F02-02 — View Assumptions | ![M-F02-02 — View Assumptions](img/M-F02-02%20%E2%80%94%20View%20Assumptions) |
+| Default | [S-F02-01 — Default](img/S-F02-01%20%E2%80%94%20Default) |
+| Empty — Missing PCF | [S-F02-01 — Empty](img/S-F02-01%20%E2%80%94%20Empty) |
+| Loading | [S-F02-01 — Loading](img/S-F02-01%20%E2%80%94%20Loading) |
+| Validation Error | [S-F02-01 — Validation Error](img/S-F02-01%20%E2%80%94%20Validation%20Error) |
+| Success | [S-F02-01 — Success](img/S-F02-01%20%E2%80%94%20Success) |
+| M-F02-01 — CBAM Result & Share | [M-F02-01 — CBAM Result & Share](img/M-F02-01%20%E2%80%94%20CBAM%20Result%20%26%20Share) |
+| M-F02-02 — View Assumptions | [M-F02-02 — View Assumptions](img/M-F02-02%20%E2%80%94%20View%20Assumptions) |
 
 All images above are the existing mockup assets in `docs/external-design/screens/img/`. The five S-F02-01 images document the main screen states; the two M-F02-01 / M-F02-02 images document the result and assumptions overlays.
 
