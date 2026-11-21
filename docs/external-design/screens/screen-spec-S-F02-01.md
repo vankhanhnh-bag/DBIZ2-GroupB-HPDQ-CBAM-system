@@ -39,13 +39,17 @@ Each number corresponds to the # of the element inventory in section 3. The numb
 
 ![S-F02-01 — Default — numbered](img/S-F02-01%20-%20Default%20-%20numbered.png)
 
+**Empty — numbered**
+
+![S-F02-01 — Empty — numbered](img/S-F02-01%20-%20Empty%20-%20numbered.png)
+
 **Loading — numbered**
 
 ![S-F02-01 — Loading — numbered](img/S-F02-01%20-%20Loading%20-%20numbered.png)
 
 **Validation Error — numbered**
 
-![S-F02-01 — Validation Error — numbered](img/S-F02-01%20-%20Error%20-%20numbered.png)
+![S-F02-01 — Validation Error — numbered](img/S-F02-01%20-%20Validation%20Error%20-%20numbered.png)
 
 **Success — numbered**
 
@@ -63,7 +67,6 @@ Each number corresponds to the # of the element inventory in section 3. The numb
 | M-F02-01 — CBAM Result & Share | [M-F02-01 — CBAM Result & Share](img/M-F02-01%20%E2%80%94%20CBAM%20Result%20%26%20Share) |
 | M-F02-02 — View Assumptions | [M-F02-02 — View Assumptions](img/M-F02-02%20%E2%80%94%20View%20Assumptions) |
 
-The Empty state is retained in the state-image list, but no numbered Empty asset is currently present in the image folder.
 
 ## 3. Element inventory
 
