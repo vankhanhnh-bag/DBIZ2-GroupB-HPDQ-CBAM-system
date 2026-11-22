@@ -16,7 +16,7 @@ next lesson will look for it.
 
 ```text
 docs/
-  project/            Lessons 1-2   project-brief.md, ai-log.md
+  project/            Lessons 1-2   project-brief.md
   context/            Lesson 3      cvca.md, context_diagram.md
   use-case/           Lesson 4      use-case-diagram.md, SD-<UC-ID>.md
   architecture/       Lesson 4      architecture.md
@@ -24,15 +24,15 @@ docs/
   activity/           Lesson 7      activity-index.md, AD-<UC-ID>.md
   external-design/    Lesson 8      usage-flow.md, screen-list.md, screen-transition.md,
                                     ui-conventions.md
-    screens/          Lesson 8      screen-spec-S-F01-02.md (worked example)
-      img/            Lesson 8      example screen images
+    screens/          Lesson 8      screen-spec-S-F01-02.md (EcoTrace screen spec)
+      img/            Lesson 8      EcoTrace numbered and unnumbered screen images
 ```
 
 ## Read it in this order
 
 | Step | Lesson | File | What it shows |
 |---|---|---|---|
-| 1 | L1-L2 | [project-brief.md](docs/project/project-brief.md) | Lesson 1–2 project brief template; still the LabDesk worked example |
+| 1 | L1-L2 | [project-brief.md](docs/project/project-brief.md) | EcoTrace project brief based on the group scope, business case and course milestones |
 | 2 | L3 | [cvca.md](docs/context/cvca.md) | EcoTrace stakeholders, value exchanges, problems and stakeholder requirements |
 | 3 | L3 | [context_diagram.md](docs/context/context_diagram.md) | EcoTrace system boundary, internal departments, external partners and data flows |
 | 4 | L4 | [use-case-diagram.md](docs/use-case/use-case-diagram.md) | Four features, UC-01 to UC-12, actors and the sequence-diagram inventory |
@@ -45,8 +45,7 @@ docs/
 | 11 | L7 | [activity-index.md](docs/activity/activity-index.md), [AD-UC-01.md](docs/activity/AD-UC-01.md), [AD-UC-02.md](docs/activity/AD-UC-02.md), [AD-UC-03.md](docs/activity/AD-UC-03.md), [AD-UC-04.md](docs/activity/AD-UC-04.md), [AD-UC-06.md](docs/activity/AD-UC-06.md), [AD-UC-07.md](docs/activity/AD-UC-07.md), [AD-UC-08.md](docs/activity/AD-UC-08.md), [AD-UC-09.md](docs/activity/AD-UC-09.md), [AD-UC-10.md](docs/activity/AD-UC-10.md), [AD-UC-11.md](docs/activity/AD-UC-11.md), [AD-UC-12.md](docs/activity/AD-UC-12.md) | Activity Diagram index and existing AD files; AD-UC-03 covers Must FR-01-03 only; AD-UC-05 is not included because UC-05 / FR-01-06 is Should; AD-UC-12 covers Must FR-04-04 only |
 | 12 | L8 | [usage-flow.md](docs/external-design/usage-flow.md) | Actor-organized usage flows connected to use cases, activity diagrams and screen IDs |
 | 13 | L8 | [screen-list.md](docs/external-design/screen-list.md), [screen-transition.md](docs/external-design/screen-transition.md), [ui-conventions.md](docs/external-design/ui-conventions.md) | EcoTrace screen inventory, navigation and product-wide UI conventions |
-| 14 | L8 | [screen-spec-S-F01-02.md](docs/external-design/screens/screen-spec-S-F01-02.md) | Teacher's LabDesk Screen Spec worked example, not an EcoTrace Screen Spec |
-| all | all | [ai-log.md](docs/project/ai-log.md) | Teacher's LabDesk AI-log worked example; no EcoTrace-specific log entered here yet |
+| 14 | L8 | [screen-spec-S-F01-02.md](docs/external-design/screens/screen-spec-S-F01-02.md) | EcoTrace Supplier & Raw Material Carbon Data Entry screen specification |
 
 ## How the files connect
 
@@ -58,8 +57,7 @@ Every file refers to the others by ID, never by retelling them:
 - `AD-UC-xx` activity diagrams trace actions and decisions to the applicable FRs.
 - `S-Fxx-nn` screens appear in the Screen List, Usage Flow and Screen Transition Diagram.
 
-Some files still show the course's LabDesk worked example rather than EcoTrace work:
-`project-brief.md` and `ai-log.md`. `AD-UC-05.md` is not present; UC-05 / FR-01-06 is Should and is not included in the current Must-only activity-diagram set. `SD-UC-05.md` remains missing; the UC-12 sequence and activity files are now present.
+The Lesson 1–2 project brief now describes EcoTrace; the unused LabDesk sample AI log was removed. `AD-UC-05.md` is not present; UC-05 / FR-01-06 is Should and is not included in the current Must-only activity-diagram set. `SD-UC-05.md` remains missing; the UC-12 sequence and activity files are now present.
 AD-UC-03 covers Must FR-01-03 only, and AD-UC-12 covers Must FR-04-04 only. UC-12's viewer scope remains an
 open traceability question because the Screen List describes an audit viewer but W1's Must FR specifies automatic recording.
 
