@@ -126,7 +126,7 @@ Criteria Selected — numbered
 
 ## Completion checklist
 
-- [x] The mockup is referenced as `img/S-F03-01.png` covering all 7 exported UI states.
+- [x] All 7 numbered state mockups are embedded in Section 2 and stored in the repository's `img/` folder.
 - [x] Every visible element in the mockup appears in the element inventory.
 - [x] Every input element has a validation rule or an explicit read-only rule.
 - [x] All states (Default, Dropdown Open, Criteria Selected, Validation Error, Loading, Empty/No Match, System Error) are filled in and traced to `AD-UC-09` / `SD-UC-09`.
