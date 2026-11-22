@@ -31,27 +31,27 @@
 
 ## 2. Mockup
 
-<img width="1440" height="1024" alt="image" src="https://github.com/user-attachments/assets/96a5f59f-3ef2-4609-951b-c1d2615ec9d4" />
+<img width="1440" height="1024" alt="image" src="img/S-F01-02%20%E2%80%94%20Default.png" />
 
 **Default, numbered**
 
-<img width="1440" height="1024" alt="S-F01-02 — Default - numbered" src="https://github.com/user-attachments/assets/51486efc-027c-4e97-a8fa-e9d6545699f7" />
+<img width="1440" height="1024" alt="S-F01-02 — Default - numbered" src="img/S-F01-02%20%E2%80%94%20Default%20-%20numbered.png" />
 
 **Loading, numbered**
 
-<img width="1440" height="1024" alt="S-F01-02 — Loading · Submitting - numbered" src="https://github.com/user-attachments/assets/0b08da9b-1c14-43ed-82de-b380ecf5aa4e" />
+<img width="1440" height="1024" alt="S-F01-02 — Loading · Submitting - numbered" src="img/S-F01-02%20%E2%80%94%20Loading%20%C2%B7%20Submitting%20-%20numbered.png" />
  
 **Success, numbered**
 
-<img width="1440" height="1024" alt="S-F01-02 — Success - numbered" src="https://github.com/user-attachments/assets/f73526ab-7052-4497-8d3a-28c7ace6a2f2" />
+<img width="1440" height="1024" alt="S-F01-02 — Success - numbered" src="img/S-F01-02%20%E2%80%94%20Success%20-%20numbered.png" />
 
 **Error, numbered**
 
-<img width="1440" height="1024" alt="S-F01-02 — Validation Error - numbered" src="https://github.com/user-attachments/assets/33d77002-137c-4816-9910-ea32387b35e5" />
+<img width="1440" height="1024" alt="S-F01-02 — Validation Error - numbered" src="img/S-F01-02%20%E2%80%94%20Validation%20Error%20-%20numbered.png" />
 
 **Save failure, numbered**
 
-<img width="1440" height="1024" alt="S-F01-02 — Save Failure - numbered" src="https://github.com/user-attachments/assets/a852755f-b448-461e-a6f4-4141487d2315" />
+<img width="1440" height="1024" alt="S-F01-02 — Save Failure - numbered" src="img/S-F01-02%20%E2%80%94%20Save%20Failure%20-%20numbered.png" />
 
 ## 3. Element inventory
 
