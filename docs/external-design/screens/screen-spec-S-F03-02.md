@@ -28,7 +28,8 @@
 **The user leaves this screen when:** they click **Edit criteria** to return to `S-F03-01`, click **View carbon profile** to inspect underlying product PCF traceability (`F-01`), or navigate to another module via the EcoTrace workspace sidebar.
 
 ## 2. Mockup
-![Uploading S-F03-02 - Default.png…]()
+<img width="1192" height="1024" alt="S-F03-02 - Default" src="https://github.com/user-attachments/assets/b3690ec3-6859-47a9-81d7-a1ea8b9edcc7" />
+
 
 Default numbered
 <img width="1453" height="1037" alt="S-F03-02 — Default — numbered" src="img/S-F03-02%20%E2%80%94%20Default%20%E2%80%94%20numbered%20.png" />
