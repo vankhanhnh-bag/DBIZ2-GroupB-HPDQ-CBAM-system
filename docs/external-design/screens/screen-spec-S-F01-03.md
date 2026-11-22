@@ -30,27 +30,27 @@
 **The user leaves this screen when:** they review the saved confirmation or navigate to another permitted EcoTrace workspace feature. UC-02 does not specify a separate post-save destination.
 
 ## 2. Mockup
-<img width="1440" height="1024" alt="image" src="https://github.com/user-attachments/assets/44977b37-ba30-4d17-bda2-0b7810138f19" />
+<img width="1440" height="1024" alt="image" src="img/S-F01-03%20%E2%80%94%20Default.png" />
 
 **Default, numbered**
 
-<img width="1440" height="1024" alt="S-F01-03 — Default - numbered" src="https://github.com/user-attachments/assets/bad5ba2b-bb5a-467d-afc8-d7234b058e25" />
+<img width="1440" height="1024" alt="S-F01-03 — Default - numbered" src="img/S-F01-03%20%E2%80%94%20Default%20-%20numbered.png" />
 
 **Loading, numbered**
 
-<img width="1440" height="1024" alt="S-F01-03 — Loading · Validating   Saving - numbered" src="https://github.com/user-attachments/assets/29be2692-8d0c-4653-9d96-03051a53ffd4" />
+<img width="1440" height="1024" alt="S-F01-03 — Loading · Validating   Saving - numbered" src="img/S-F01-03%20%E2%80%94%20Loading%20%C2%B7%20Validating%20%26%20Saving%20-%20numbered.png" />
  
 **Success, numbered**
 
-<img width="1440" height="1024" alt="S-F01-03 — Success · Version Saved - numbered" src="https://github.com/user-attachments/assets/cd035ed8-b358-4e16-8a3e-ecaaaa024491" />
+<img width="1440" height="1024" alt="S-F01-03 — Success · Version Saved - numbered" src="img/S-F01-03%20%E2%80%94%20Success%20%C2%B7%20Version%20Saved%20-%20numbered.png" />
 
 **Error, numbered**
 
-<img width="1440" height="1024" alt="S-F01-03 — Validation Error - numbered" src="https://github.com/user-attachments/assets/bdd16167-09e4-42c0-8e68-90fdffb256f2" />
+<img width="1440" height="1024" alt="S-F01-03 — Validation Error - numbered" src="img/S-F01-03%20%E2%80%94%20Validation%20Error%20-%20numbered.png" />
 
 **Change justification, numbered**
 
-<img width="1440" height="1024" alt="S-F01-03 — Change Justification Required - numbered" src="https://github.com/user-attachments/assets/2aab388b-1a78-492e-9d91-472ba481fac9" />
+<img width="1440" height="1024" alt="S-F01-03 — Change Justification Required - numbered" src="img/S-F01-03%20%E2%80%94%20Change%20Justification%20Required%20-%20numbered.png" />
 
 
 ## 3. Element inventory
