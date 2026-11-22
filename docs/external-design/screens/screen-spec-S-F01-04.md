@@ -16,7 +16,7 @@
 | Linked requirements | FR-01-03 (Must — calculation); FR-01-04 (Should — user selection and display of calculated intensity and contributing data sources) |
 | Screen List priority | Must (as currently recorded in Screen List) |
 | Priority discrepancy | W1 classifies FR-01-03 as Must and FR-01-04 as Should. SD-UC-03 / AD-UC-03 explicitly exclude the FR-01-04 user selection/display interaction from the Must-only calculation path. This screen's user-facing display behavior therefore maps to FR-01-04 (Should), while the calculation is performed in the background under FR-01-03 (Must). Confirm whether the Screen List priority should remain Must or be changed to Should. |
-| Mockup / Figma plugin | (#2-mockup) — Default, Loading / Retrieving Intensity, Success / Intensity Available, No Calculated Result and System Error. |
+| Mockup / Figma plugin | [Five numbered state mockups in §2](#2-mockup) — Default, Loading / Retrieving Intensity, Success / Intensity Available, No Calculated Result and System Error. |
 | Source data categories | Production data; energy and operational data; applicable GHG methodology and emission factors |
 | Important limitation | Exact calculation formula, unit, process boundary, factor-selection rule, energy-source mapping, persistence/retrieval design and failure handling are not fully specified in the current source documents. |
 
