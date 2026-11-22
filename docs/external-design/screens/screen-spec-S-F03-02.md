@@ -114,7 +114,7 @@ Data Error numbered
 
 ## Completion checklist
 
-- [x] The mockup is referenced as `img/S-F03-02.png` covering all 4 exported UI states.
+- [x] All 5 numbered state mockups are embedded in Section 2 and stored in the repository's `img/` folder.
 - [x] Every visible element in the mockup appears in the element inventory.
 - [x] All applicable states (Loading, Partial Carbon Data, Success/Saved, System Error, plus N/A justification for Empty) are filled in and traced to `AD-UC-09` / `SD-UC-09`.
 - [x] Every navigation target (`S-F03-01`) exists in the Screen List.
