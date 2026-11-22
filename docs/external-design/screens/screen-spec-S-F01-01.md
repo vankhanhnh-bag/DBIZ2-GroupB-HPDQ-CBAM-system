@@ -30,29 +30,29 @@
 
 ## 2. Mockup
 
-<img width="1440" height="1024" alt="image" src="https://github.com/user-attachments/assets/92abe4f5-9ff1-4aea-a9f0-ce499d0dbda7" />
+<img width="1440" height="1024" alt="image" src="img/S-F01-01%20%E2%80%94%20Default.png" />
 
 Numbered: each number is the # of the element inventory in section 3. Element 8 (Error banner) appears only in the error state, so it is numbered on the error image.
 
 **Default, numbered**
 
-<img width="1440" height="1024" alt="S-F01-01 — Default - numbered" src="https://github.com/user-attachments/assets/b6b053d6-0239-4fc7-be1f-1025ed7c0c1c" />
+<img width="1440" height="1024" alt="S-F01-01 — Default - numbered" src="img/S-F01-01%20%E2%80%94%20Default%20-%20numbered.png" />
 
 **Loading, numbered**
 
-<img width="1440" height="1024" alt="S-F01-01 — Loading - numbered" src="https://github.com/user-attachments/assets/6229e849-9642-4848-8e97-e0167ed07e8c" />
+<img width="1440" height="1024" alt="S-F01-01 — Loading - numbered" src="img/S-F01-01%20%E2%80%94%20Loading%20-%20numbered.png" />
  
 **Success, numbered**
 
-<img width="1440" height="1024" alt="S-F01-01 — Success · Calculated - numbered" src="https://github.com/user-attachments/assets/f4147388-a5cd-423b-a078-ceed729eb927" />
+<img width="1440" height="1024" alt="S-F01-01 — Success · Calculated - numbered" src="img/S-F01-01%20%E2%80%94%20Success%20%C2%B7%20Calculated%20-%20numbered.png" />
 
 **Error, numbered**
 
-<img width="1440" height="1024" alt="S-F01-01 — Error - numbered" src="https://github.com/user-attachments/assets/08343488-5022-47b9-874a-927a7a562ae4" />
+<img width="1440" height="1024" alt="S-F01-01 — Error - numbered" src="img/S-F01-01%20%E2%80%94%20Error%20-%20numbered.png" />
 
 **Missing data, numbered**
 
-<img width="1440" height="1024" alt="S-F01-01 — Missing required data - numbered" src="https://github.com/user-attachments/assets/c4dafe91-6b59-419a-b346-b73976e73b12" />
+<img width="1440" height="1024" alt="S-F01-01 — Missing required data - numbered" src="img/S-F01-01%20%E2%80%94%20Missing%20required%20data%20-%20numbered.png" />
 
 ## 3. Element inventory
 

@@ -14,7 +14,7 @@
 | Use case | `UC-09` Compare and recommend green steel options |
 | Activity diagram | `AD-UC-09` — fetch PCF & data quality (`s5`), calculate carbon intensity & CBAM cost (`s6`), calculate overall score (`s7`), rank and assign Primary / Alternative flags (`s8`), store results (`s9`), and display results (`a2`) |
 | Linked sequence | `SD-UC-09` — steps 8–15: EcoTrace BE calculates weighted score (`8`), stores comparison results in EcoTrace Database (`9–10`), sorts and assigns Primary/Alternative flags (`11`), stores recommendation (`12–13`), returns options to web UI (`14`), and displays options to Customer (`15`) |
-| Mockup image | `img/S-F03-02.png` (covers 5 exported state frames: Default, Loading · Calculating Scores, Success · Recommendation Saved, Partial Carbon Data, System/Data Error) |
+| Mockup image | 5 numbered state images embedded in Section 2 from the repository's `img/` directory (covers 5 exported state frames: Default, Loading · Calculating Scores, Success · Recommendation Saved, Partial Carbon Data, System/Data Error) |
 | Status values | `Calculated & Ranked` (object state of Comparison & Recommendation Results in `AD-UC-09` `o1`); recommendation flags displayed per option: `PRIMARY`, `ALTERNATIVE`, `SELECTED`, `REVIEW`, `INCOMPLETE DATA`. |
 
 ## 1. Purpose
@@ -29,15 +29,15 @@
 
 ## 2. Mockup
 Default numbered
-<img width="1453" height="1037" alt="Default" src="https://github.com/user-attachments/assets/31590d6c-5632-48c6-a19f-262771c44488" />
+<img width="1453" height="1037" alt="S-F03-02 — Default — numbered" src="img/S-F03-02%20%E2%80%94%20Default%20%E2%80%94%20numbered%20.png" />
 Calculation scores numbered
-<img width="1453" height="1037" alt="Calculation" src="https://github.com/user-attachments/assets/c6a3fac4-2497-47ec-a9be-589103b91566" />
+<img width="1453" height="1037" alt="S-F03-02 — Calculation Scores — numbered" src="img/S-F03-02%20%E2%80%94%20Calculation%20Scores%20%E2%80%94%20numbered%20.png" />
 Recommendation Saved numbered
-<img width="1453" height="1037" alt="Recommendation Saved" src="https://github.com/user-attachments/assets/64cded8c-0e2c-4747-a35d-bb29b87aab00" />
+<img width="1453" height="1037" alt="S-F03-02 — Recommendation Saved — numbered" src="img/S-F03-02%20%E2%80%94%20Recommendation%20Saved%20%E2%80%94%20numbered%20.png" />
 Partical Carbon Data numbered
-<img width="1453" height="1037" alt="Partical Carbon Data" src="https://github.com/user-attachments/assets/164a55cb-4a7d-453b-ab7f-69712f96c8d7" />
+<img width="1453" height="1037" alt="S-F03-02 — Partial Carbon Data — numbered" src="img/S-F03-02%20%E2%80%94%20Partical%20Carbon%20Data%20%E2%80%94%20numbered%20.png" />
 Data Error numbered
-<img width="1453" height="1037" alt="SystemData Error" src="https://github.com/user-attachments/assets/463a1782-132e-4c43-859c-d55fbb25451b" />
+<img width="1453" height="1037" alt="S-F03-02 — System Data Error — numbered" src="img/S-F03-02%20%E2%80%94%20System%20Data%20Error%20%E2%80%94%20numbered%20.png" />
 
 ## 3. Element inventory
 
@@ -114,7 +114,7 @@ Data Error numbered
 
 ## Completion checklist
 
-- [x] The mockup is referenced as `img/S-F03-02.png` covering all 4 exported UI states.
+- [x] All 5 numbered state mockups are embedded in Section 2 and stored in the repository's `img/` folder.
 - [x] Every visible element in the mockup appears in the element inventory.
 - [x] All applicable states (Loading, Partial Carbon Data, Success/Saved, System Error, plus N/A justification for Empty) are filled in and traced to `AD-UC-09` / `SD-UC-09`.
 - [x] Every navigation target (`S-F03-01`) exists in the Screen List.
