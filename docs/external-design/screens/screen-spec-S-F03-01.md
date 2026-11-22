@@ -29,6 +29,7 @@
 
 ## 2. Mockup
 
+<img width="1440" height="1024" alt="S-F03-01 — Default" src="https://github.com/user-attachments/assets/56dde6c1-e8ea-47d6-831b-ac7c362c87ad" />
 
 Default — numbered
 <img width="1453" height="1037" alt="S-F03-01 — Default — numbered" src="img/S-F03-01%20%E2%80%94%20Default%20%E2%80%94%20numbered.png" />
