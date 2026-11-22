@@ -14,7 +14,7 @@
 | Use case | `UC-09` Compare and recommend green steel options |
 | Activity diagram | `AD-UC-09` — input and submit comparison criteria (`a1`), validate parameters (`s1`, `d1`), identify validation errors (`s2`), query product profiles & CBAM costs (`s3`, `d2`), and check partial matches / suggest filter adjustments (`s4`) |
 | Linked sequence | `SD-UC-09` — steps 1–7: Customer inputs criteria on EcoTrace web UI (`1`), submits filters to EcoTrace BE (`2`), validates parameters (`3`), queries Product & Carbon DB (`4–5`), and stores retrieved data in EcoTrace Database (`6–7`) |
-| Mockup image | `img/S-F03-01.png` (covers 7 exported state frames: Default, Dropdown Open, Criteria Selected, Validation Error, Loading · Comparing, No Matching Products, System/Data Error) |
+| Mockup image | 7 numbered state images embedded in Section 2 from the repository's `img/` directory (covers 7 exported state frames: Default, Dropdown Open, Criteria Selected, Validation Error, Loading · Comparing, No Matching Products, System/Data Error) |
 | Status values | No persisted business status is written on this screen; `Calculated & Ranked` is only produced downstream on `S-F03-02` (`AD-UC-09` object node `o1`). |
 
 ## 1. Purpose
@@ -31,19 +31,19 @@
 
 
 Default — numbered
-<img width="1453" height="1037" alt="S-F03-01 — Default — numbered" src="https://github.com/user-attachments/assets/5d8a0681-642f-4f95-8b9d-8884fc0569bf" />
+<img width="1453" height="1037" alt="S-F03-01 — Default — numbered" src="img/S-F03-01%20%E2%80%94%20Default%20%E2%80%94%20numbered.png" />
 Validation Error — numbered
-<img width="1453" height="1037" alt="S-F03-01 — Validation Error — numbered" src="https://github.com/user-attachments/assets/d3a2dae6-be69-4378-8625-509218bb1b79" />
+<img width="1453" height="1037" alt="S-F03-01 — Validation Error — numbered" src="img/S-F03-01%20%E2%80%94%20Validation%20Error%20%E2%80%94%20numbered%20.png" />
 No Matching Products — numbered
-<img width="1453" height="1037" alt="S-F03-01 — No Matching Products — numbered" src="https://github.com/user-attachments/assets/95675bbb-925d-4f96-8ece-875b2f1df107" />
+<img width="1453" height="1037" alt="S-F03-01 — No Matching Products — numbered" src="img/S-F03-01%20%E2%80%94%20No%20Matching%20Products%20%E2%80%94%20numbered%20.png" />
 Loading · Comparing — numbered
-<img width="1453" height="1037" alt="S-F03-01 — Loading · Comparing — numbered" src="https://github.com/user-attachments/assets/0ac44dde-4ec0-4080-b24e-d2ee63ec1a66" />
+<img width="1453" height="1037" alt="S-F03-01 — Loading · Comparing — numbered" src="img/S-F03-01%20%E2%80%94%20Loading%20%C2%B7%20Comparing%20%E2%80%94%20numbered%20.png" />
 Dropdown Open — numbered
-<img width="1453" height="1037" alt="S-F03-01 — Dropdown Open — numbered" src="https://github.com/user-attachments/assets/2765cfe9-13a8-48cc-8c50-b1f652990a8f" />
+<img width="1453" height="1037" alt="S-F03-01 — Dropdown Open — numbered" src="img/S-F03-01%20%E2%80%94%20Dropdown%20Open%20%E2%80%94%20numbered%20.png" />
 Data Error — numbered
-<img width="1453" height="1037" alt="S-F03-01 — Data Error — numbered" src="https://github.com/user-attachments/assets/279da112-2362-40e2-90d4-e739c562fd3f" />
+<img width="1453" height="1037" alt="S-F03-01 — Data Error — numbered" src="img/S-F03-01%20%E2%80%94%20Data%20Error%20%E2%80%94%20numbered%20.png" />
 Criteria Selected — numbered
-<img width="1453" height="1037" alt="S-F03-01 — Criteria Selected — numbered" src="https://github.com/user-attachments/assets/578df319-0bad-443c-bba1-06b428f036c1" />
+<img width="1453" height="1037" alt="S-F03-01 — Criteria Selected — numbered" src="img/S-F03-01%20%E2%80%94%20Criteria%20Selected%20%E2%80%94%20numbered%20.png" />
 
 
 ## 3. Element inventory
